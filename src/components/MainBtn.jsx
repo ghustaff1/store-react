@@ -49,7 +49,7 @@ const MainBtn = ({ size, type, text, dir }) => {
     <Button size={size} type={type}>
       {dir === 'prev' ?
         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M9.46658 4.81332L6.72658 7.55332C6.60241 7.67823 6.53271 7.8472 6.53271 8.02332C6.53271 8.19945 6.60241 8.36842 6.72658 8.49332L9.39324 11.16" stroke="#151515" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="bevel" />
+          <path d="M9.46658 4.81332L6.72658 7.55332C6.60241 7.67823 6.53271 7.8472 6.53271 8.02332C6.53271 8.19945 6.60241 8.36842 6.72658 8.49332L9.39324 11.16" stroke="#151515" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="bevel" />
         </svg>
 
         :
@@ -58,7 +58,7 @@ const MainBtn = ({ size, type, text, dir }) => {
       {
         dir === 'next' ?
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M6.5332 11.1867L9.2732 8.44666C9.39737 8.32175 9.46706 8.15279 9.46706 7.97666C9.46706 7.80054 9.39737 7.63157 9.2732 7.50666L6.60654 4.84" stroke="#151515" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="bevel" />
+            <path d="M6.5332 11.1867L9.2732 8.44666C9.39737 8.32175 9.46706 8.15279 9.46706 7.97666C9.46706 7.80054 9.39737 7.63157 9.2732 7.50666L6.60654 4.84" stroke="#151515" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="bevel" />
           </svg>
 
           :

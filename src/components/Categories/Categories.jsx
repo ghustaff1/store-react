@@ -1,26 +1,29 @@
 import React from 'react'
 import './Categories.scss';
 import CategoriesItem from '../CategoriesItem/CategoriesItem';
+import axios from 'axios';
 
 const Categories = () => {
+  const [categoriesData, setCategoriesData] = React.useState([]);
 
+  const fetchCategories = async () => {
+    await axios.get('http://localhost:8000/categories')
+      .then(res => setCategoriesData(res.data));
+  }
+  React.useEffect(() => {
+    fetchCategories();
+  }, [])
+  
 
-  const categoriesTitles = ['Bakery', 'Fruit and vegetables', 'Meat and fish', 'Drinks', 'Kitchen', 'Special nutrition', 'Baby', 'Pharmasy'];
-
-  const categoriesTestData = ['Title 1', 'Title 2', 'Title 3', 'Title 4', 'Title 5', 'Title 6'];
 
   return (
     <div className='categories'>
       <div className='container'>
         <ul className='categories-list'>
           {
-            categoriesTitles.map((title) => {
-              return (
-                <CategoriesItem key={title} title={title}/>
-              )
-            })
+            categoriesData.map((obj) => <CategoriesItem key={obj.title} {...obj} />
+            )
           }
-  
         </ul>
       </div>
     </div>

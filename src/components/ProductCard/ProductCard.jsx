@@ -1,17 +1,20 @@
 import React from 'react'
 import './ProductCard.scss';
-import imageUrl from '../../assets/testFoodImg.jpg';
 import MainBtn from '../MainBtn';
 
-const ProductCard = ({ actualPrice, datedPrice, sale }) => {
+const ProductCard = ({ title, descr, imgUrl, actualPrice, datedPrice }) => {
 
+  const sale = datedPrice ? Math.round((1 - actualPrice / datedPrice)*100) : null;
+  console.log(sale)
   return (
     <div className="productCard">
-      {sale && <div className="productCard__sale">-{sale * 100} %</div>}
-      <img src={imageUrl} alt="" />
+      {sale && <div className="productCard__sale">- {sale} %</div>}
+      <div className='productCard__img'>
+        <img src={imgUrl} alt="" />
+      </div>
       <div className='productCard__text'>
-        <h2 className='productCard__title'>Product title</h2>
-        <p className='productCard__descr'>Space for a small product description</p>
+        <h2 className='productCard__title'>{title}</h2>
+        <p className='productCard__descr'>{descr}</p>
       </div>
       <div className="productCard__bottom">
         <div className="productCard__price">

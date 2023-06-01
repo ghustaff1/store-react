@@ -1,40 +1,25 @@
 import React from 'react'
-import './BestSell.scss';
-import MoreBtn from '../MoreBtn';
-import ProductCard from '../ProductCard/ProductCard';
-import GreenLink from '../GreenLink';
-import MainBtn from '../MainBtn';
+import axios from 'axios';
+import HomeSection from '../HomeProductsSection/HomeProductsSection';
 
 const BestSell = () => {
 
-  const tempCardObj={
-    actualPrice:'12.45', 
-    datedPrice:'15.99', 
-    sale:'0.2'
+  const [data, setData] = React.useState([]);
+
+
+  const fetchBestSell = async () => {
+      await axios.get('http://localhost:8000/bestSell')
+      .then(res=>setData(res.data));
   }
 
-  const tempListdata=['Kitchen', 'Meat and fish', 'Special nutrition','Pharmasy','Baby'];
+  React.useEffect(() => {
+    fetchBestSell();
+  }, [])
+
+
 
   return (
-    <div className="bestSell">
-      <div className="container">
-        <div className="bestSell__wrapper">
-          <aside className="bestSell__aside">
-            <h2>Best selling products</h2>
-            <ul>
-              {tempListdata.map(title=><li key={title}><GreenLink underline={true} value={title}/></li>)}
-            </ul>
-            
-            <MainBtn type='3' size='medium' text='More products' dir='next'/>
-          </aside>
-          <div className="bestSell__content">
-            <ProductCard {...tempCardObj}/>
-            <ProductCard {...tempCardObj}/>
-            <ProductCard {...tempCardObj}/>
-          </div>
-        </div>
-      </div>
-    </div>
+    <HomeSection data={data} className='bestSell' />
   )
 }
 

@@ -1,0 +1,154 @@
+{
+  "categories": [
+    {
+      "title": "Bakery",
+      "subTitles": [
+        "Bread",
+        "Croissants",
+        "Panini"
+      ]
+    },
+    {
+      "title": "Fruits and vegerables",
+      "subTitles": [
+        "Apples",
+        "Bananas",
+        "Peaches"
+      ]
+    },
+    {
+      "title": "Meat and fish",
+      "subTitles": [
+        "Pork",
+        "Salmon",
+        "Duck"
+      ]
+    },
+    {
+      "title": "Drinks",
+      "subTitles": [
+        "Cola",
+        "Still water",
+        "Orange juice"
+      ]
+    }
+  ],
+  "bestSell": {
+    "title":"Best selling products",
+    "links": [
+      "Kitchen",
+      "Fruit and vegetables",
+      "Meat and fish",
+      "Drinks"
+    ],
+    "items": [
+      {
+        "id": "0",
+        "title": "Carrot",
+        "descr": "lorem ipsum fdf",
+        "actualPrice": "12.43",
+        "datedPrice": "15.34",
+        "imgUrl": "img/testFoodImg.jpg"
+      },
+      {
+        "id": "1",
+        "title": "Apple",
+        "descr": "lorem ipsum fdf",
+        "actualPrice": "5.43",
+        "imgUrl": "img/testFoodImg.jpg"
+      },
+      {
+        "id": "2",
+        "title": "Peach",
+        "descr": "lorem ipsum fdf",
+        "actualPrice": "5.34",
+        "imgUrl": "img/testFoodImg.jpg"
+      }
+    ]
+  },
+  "bestFarmers": {
+    "title":"Best from Farmers",
+    "links": [
+      "John Cardy's farm",
+      "Maui Tropical Plantation",
+      "Grant's Farm",
+      "Kauai Coffee Company"
+    ],
+    "items": [
+      {
+        "id": "John Cardy's farm",
+        "title": "Mango",
+        "descr": "lorem ipsum fdf",
+        "actualPrice": "6.54",
+        "datedPrice": "9.67",
+        "imgUrl": "img/testFoodImg.jpg"
+      },
+      {
+        "id": "Grant's Farm",
+        "title": "Passion fruit",
+        "descr": "lorem ipsum fdf",
+        "actualPrice": "5.43",
+        "imgUrl": "img/testFoodImg.jpg"
+      },
+      {
+        "id": "Kauai Coffee Company",
+        "title": "Coffea liberica",
+        "descr": "lorem ipsum fdf",
+        "actualPrice": "30.99",
+        "imgUrl": "img/testFoodImg.jpg"
+      }
+    ]
+  },
+  "reviews":[
+    {
+      "id":"Agata Smith",
+      "name":"Agata Smith",
+      "text":"This is an super space for your customers qoute. Don’t worry it works smooth as pie. You will get all what you need by writiing a text here",
+      "imgUrl":"img/reviews/face1.jpg",
+      "alt":"photo"
+    },
+    {
+      "id":"Lenny Coffey",
+      "name":"Lenny Coffey",
+      "text":"This is an super space for your customers qoute. Don’t worry it works smooth as pie. You will get all what you need by writiing a text here",
+      "imgUrl":"img/reviews/face2.jpg",
+      "alt":"photo"
+    },
+    {
+      "id":"Miriam Norman",
+      "name":"Miriam Norman",
+      "text":"This is an super space for your customers qoute. Don’t worry it works smooth as pie. You will get all what you need by writiing a text here",
+      "imgUrl":"img/reviews/face3.jpg",
+      "alt":"photo"
+    },
+    {
+      "id":"Estelle Chavez",
+      "name":"Estelle Chavez",
+      "text":"This is an super space for your customers qoute. Don’t worry it works smooth as pie. You will get all what you need by writiing a text here",
+      "imgUrl":"img/reviews/face4.jpg",
+      "alt":"photo"
+    },
+    {
+      "id":"Kimberly Vargas",
+      "name":"Kimberly Vargas",
+      "text":"This is an super space for your customers qoute. Don’t worry it works smooth as pie. You will get all what you need by writiing a text here",
+      "imgUrl":"img/reviews/face5.jpg",
+      "alt":"photo"
+    },
+    {
+      "id":"Janice Yates",
+      "name":"Janice Yates",
+      "text":"This is an super space for your customers qoute. Don’t worry it works smooth as pie. You will get all what you need by writiing a text here",
+      "imgUrl":"img/reviews/face6.jpg",
+      "alt":"photo"
+    },
+    {
+      "id":"Lowri Elliott",
+      "name":"Lowri Elliott",
+      "text":"This is an super space for your customers qoute. Don’t worry it works smooth as pie. You will get all what you need by writiing a text here",
+      "imgUrl":"img/reviews/face7.jpg",
+      "alt":"photo"
+    }
+    
+  ]
+}
