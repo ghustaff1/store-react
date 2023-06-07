@@ -1,16 +1,17 @@
 .categoriesItem {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  cursor: pointer;
   position: relative;
+  a {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
   p {
     font-family: "Poppins", sans-serif;
     font-weight: 500;
     font-size: 16px;
   }
   svg {
-   // transform: translateY(2px);
+    // transform: translateY(2px);
   }
 
   .categoriesItem-popup {

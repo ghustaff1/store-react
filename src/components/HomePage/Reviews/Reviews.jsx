@@ -1,11 +1,13 @@
 import React from 'react';
 import axios from 'axios';
 import './Reviews.scss';
-import HomeSectionTitle from '../HomeSectionTitle';
+import HomeSectionTitle from '../../HomeSectionTitle';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation } from 'swiper';
-import 'swiper/scss/navigation';
-import 'swiper/scss';
+import { Navigation, A11y } from 'swiper';
+import { useSwiper } from 'swiper/react';
+import 'swiper/scss'; // core Swiper
+import 'swiper/scss/navigation'; // Navigation module
+import 'swiper/scss/pagination';
 
 const Reviews = () => {
   const [reviewsData, setReviewsData] = React.useState([]);
@@ -17,7 +19,9 @@ const Reviews = () => {
 
   React.useEffect(() => {
     getReviwsData();
-  }, [])
+  }, []);
+
+  const swiper=useSwiper();
 
   return (
     <div className="reviews">
@@ -25,17 +29,16 @@ const Reviews = () => {
         <HomeSectionTitle title='Our customers says' />
       </div>
       <Swiper
-        modules={[Navigation]}
+        modules={[Navigation, A11y]}
         spaceBetween={50}
         slidesPerView={4}
         navigation
-        loop={true}
-        onSwiper={(swiper) => console.log(swiper)}
+        scrollbar={{ draggable: true }}
         onSlideChange={() => console.log('slide change')}
       >
         {reviewsData?.map(obj => {
           return (
-            <SwiperSlide>
+            <SwiperSlide key={obj.name}>
               <article>
                 <p className='review__text'>" {obj.text} "</p>
                 <h3 className='review__name'>{obj.name}</h3>
@@ -50,5 +53,6 @@ const Reviews = () => {
     </div>
   )
 }
+
 
 export default Reviews;

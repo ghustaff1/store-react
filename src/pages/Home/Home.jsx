@@ -1,8 +1,8 @@
 import React from 'react'
 import './Home.scss';
-import BestSell from '../../components/BestSell/BestSell';
-import BestFarmers from '../../components/BestFarmers/BestFarmers';
-import Reviews from '../../components/Reviews/Reviews';
+import BestSell from '../../components/HomePage/BestSell/BestSell';
+import BestFarmers from '../../components/HomePage/BestFarmers/BestFarmers';
+import Reviews from '../../components/HomePage/Reviews/Reviews';
 
 const Home = () => {
 

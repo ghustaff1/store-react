@@ -1,0 +1,42 @@
+.BaseProductInfo{
+  &__categories{
+    display: flex;
+    //justify-content: space-around;
+    border-bottom: 2px solid #F5F5F5;
+    margin-bottom: 32px;
+  }
+  &__category{
+    cursor: pointer;
+    flex: 1 0 50%;
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    line-height: 1.5;
+    font-weight: 600;
+    color:#151515;
+    text-align: center;
+    padding: 46px 0 16px 0;
+    &.active{
+      border-bottom: 2px solid #6A983C;
+    }
+  }
+  &__farm{
+    font-family: "Poppins", sans-serif;
+    color:#151515;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.3;
+    margin-bottom: 5px;
+  }
+  &__farmDescr{
+    font-size: 15px;
+    color:#151515;
+    line-height: 1.3;
+    margin-bottom: 32px;
+  }
+  &__review{
+    padding: 10px 10px;
+    margin-bottom: 10px;
+    border: 2px solid #F5F5F5;
+    border-radius: 12px;
+  }
+}

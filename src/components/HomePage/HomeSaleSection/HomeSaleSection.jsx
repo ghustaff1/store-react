@@ -1,28 +1,29 @@
 import React from 'react'
 import './HomeProductsSection.scss';
-import MainBtn from '../MainBtn';
-import GreenLink from '../GreenLink';
+import MainBtn from '../../MainBtn';
+import GreenLink from '../../GreenLink';
 import ProductCard from '../ProductCard/ProductCard';
-import HomeSectionTitle from '../HomeSectionTitle';
+import HomeSectionTitle from '../../HomeSectionTitle';
 
 
-const HomeSection = ({ data, className }) => {
+const HomeSaleSection = ({ title, data, links, className }) => {
 
+  
   return (
     <div className={`homeSection ${className}`}>
       <div className="container">
         <div className='homeSection__wrapper'>
           <aside className='homeSection__aside'>
-            <HomeSectionTitle title={data?.title} />
+            <HomeSectionTitle title={title} />
             <ul>
-              {data?.links?.map(title => {
-                return <li key={title}><GreenLink underline={true} value={title} /></li>;
+              {links?.map(link => {
+                return <li key={link}><GreenLink underline={true} value={link} /></li>;
               })}
             </ul>
             <MainBtn type='3' size='medium' text='More products' dir='next' />
           </aside>
           <div className='homeSection__cards'>
-            {data?.items?.map(obj => <ProductCard key={obj.id} {...obj} />)}
+            {data?.map(obj => <ProductCard key={obj.id} {...obj} />)}
           </div>
         </div>
       </div>
@@ -30,4 +31,4 @@ const HomeSection = ({ data, className }) => {
   )
 }
 
-export default HomeSection;
+export default HomeSaleSection;

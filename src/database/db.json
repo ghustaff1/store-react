@@ -33,122 +33,264 @@
       ]
     }
   ],
-  "bestSell": {
-    "title":"Best selling products",
-    "links": [
-      "Kitchen",
-      "Fruit and vegetables",
-      "Meat and fish",
-      "Drinks"
-    ],
-    "items": [
-      {
-        "id": "0",
-        "title": "Carrot",
-        "descr": "lorem ipsum fdf",
-        "actualPrice": "12.43",
-        "datedPrice": "15.34",
-        "imgUrl": "img/testFoodImg.jpg"
-      },
-      {
-        "id": "1",
-        "title": "Apple",
-        "descr": "lorem ipsum fdf",
-        "actualPrice": "5.43",
-        "imgUrl": "img/testFoodImg.jpg"
-      },
-      {
-        "id": "2",
-        "title": "Peach",
-        "descr": "lorem ipsum fdf",
-        "actualPrice": "5.34",
-        "imgUrl": "img/testFoodImg.jpg"
-      }
-    ]
-  },
   "bestFarmers": {
-    "title":"Best from Farmers",
     "links": [
       "John Cardy's farm",
       "Maui Tropical Plantation",
       "Grant's Farm",
       "Kauai Coffee Company"
     ],
-    "items": [
+    "products": [
       {
-        "id": "John Cardy's farm",
+        "id": "05",
         "title": "Mango",
-        "descr": "lorem ipsum fdf",
-        "actualPrice": "6.54",
-        "datedPrice": "9.67",
-        "imgUrl": "img/testFoodImg.jpg"
+        "rating": "4",
+        "category": "Fruits and vegetables",
+        "descr": "Space for a small description",
+        "actualPrice": "4.54",
+        "datedPrice": "6.72",
+        "imgUrl": [
+          "/img/mango.jpg"
+        ],
+        "amount": "245",
+        "measure": "kg",
+        "farm": "Grocery Tarm Fields",
+        "freshness": "1",
+        "sells": "546",
+        "recipe": "Recipe for mango"
       },
       {
-        "id": "Grant's Farm",
+        "id": "06",
         "title": "Passion fruit",
-        "descr": "lorem ipsum fdf",
-        "actualPrice": "5.43",
-        "imgUrl": "img/testFoodImg.jpg"
+        "rating": "4",
+        "category": "Fruits and vegetables",
+        "descr": "Space for a small description",
+        "actualPrice": "7.56",
+        "datedPrice": "9.92",
+        "imgUrl": [
+          "/img/pasfruit.jpg"
+        ],
+        "amount": "245",
+        "measure": "kg",
+        "farm": "Grant's Farm",
+        "freshness": "1",
+        "sells": "546",
+        "recipe": "Recipe for pasfruit"
       },
       {
-        "id": "Kauai Coffee Company",
-        "title": "Coffea liberica",
-        "descr": "lorem ipsum fdf",
+        "id": "07",
+        "title": "Kauai Coffee Company",
+        "rating": "4",
+        "category": "Drinks",
+        "descr": "Space for a small description",
         "actualPrice": "30.99",
-        "imgUrl": "img/testFoodImg.jpg"
+        "datedPrice": "42.66",
+        "imgUrl": [
+          "/img/coffee.jpg"
+        ],
+        "amount": "245",
+        "measure": "kg",
+        "farm": "Kauai Coffee Farm",
+        "freshness": "1",
+        "sells": "546",
+        "recipe": "Descr for coffe"
       }
     ]
   },
-  "reviews":[
+  "reviews": [
     {
-      "id":"Agata Smith",
-      "name":"Agata Smith",
-      "text":"This is an super space for your customers qoute. Don’t worry it works smooth as pie. You will get all what you need by writiing a text here",
-      "imgUrl":"img/reviews/face1.jpg",
-      "alt":"photo"
+      "id": "Agata Smith",
+      "name": "Agata Smith",
+      "text": "This is an super space for your customers qoute. Don’t worry it works smooth as pie. You will get all what you need by writiing a text here",
+      "imgUrl": "img/reviews/face1.jpg",
+      "alt": "photo"
     },
     {
-      "id":"Lenny Coffey",
-      "name":"Lenny Coffey",
-      "text":"This is an super space for your customers qoute. Don’t worry it works smooth as pie. You will get all what you need by writiing a text here",
-      "imgUrl":"img/reviews/face2.jpg",
-      "alt":"photo"
+      "id": "Lenny Coffey",
+      "name": "Lenny Coffey",
+      "text": "This is an super space for your customers qoute. Don’t worry it works smooth as pie. You will get all what you need by writiing a text here",
+      "imgUrl": "img/reviews/face2.jpg",
+      "alt": "photo"
     },
     {
-      "id":"Miriam Norman",
-      "name":"Miriam Norman",
-      "text":"This is an super space for your customers qoute. Don’t worry it works smooth as pie. You will get all what you need by writiing a text here",
-      "imgUrl":"img/reviews/face3.jpg",
-      "alt":"photo"
+      "id": "Miriam Norman",
+      "name": "Miriam Norman",
+      "text": "This is an super space for your customers qoute. Don’t worry it works smooth as pie. You will get all what you need by writiing a text here",
+      "imgUrl": "img/reviews/face3.jpg",
+      "alt": "photo"
     },
     {
-      "id":"Estelle Chavez",
-      "name":"Estelle Chavez",
-      "text":"This is an super space for your customers qoute. Don’t worry it works smooth as pie. You will get all what you need by writiing a text here",
-      "imgUrl":"img/reviews/face4.jpg",
-      "alt":"photo"
+      "id": "Estelle Chavez",
+      "name": "Estelle Chavez",
+      "text": "This is an super space for your customers qoute. Don’t worry it works smooth as pie. You will get all what you need by writiing a text here",
+      "imgUrl": "img/reviews/face4.jpg",
+      "alt": "photo"
     },
     {
-      "id":"Kimberly Vargas",
-      "name":"Kimberly Vargas",
-      "text":"This is an super space for your customers qoute. Don’t worry it works smooth as pie. You will get all what you need by writiing a text here",
-      "imgUrl":"img/reviews/face5.jpg",
-      "alt":"photo"
+      "id": "Kimberly Vargas",
+      "name": "Kimberly Vargas",
+      "text": "This is an super space for your customers qoute. Don’t worry it works smooth as pie. You will get all what you need by writiing a text here",
+      "imgUrl": "img/reviews/face5.jpg",
+      "alt": "photo"
     },
     {
-      "id":"Janice Yates",
-      "name":"Janice Yates",
-      "text":"This is an super space for your customers qoute. Don’t worry it works smooth as pie. You will get all what you need by writiing a text here",
-      "imgUrl":"img/reviews/face6.jpg",
-      "alt":"photo"
+      "id": "Janice Yates",
+      "name": "Janice Yates",
+      "text": "This is an super space for your customers qoute. Don’t worry it works smooth as pie. You will get all what you need by writiing a text here",
+      "imgUrl": "img/reviews/face6.jpg",
+      "alt": "photo"
     },
     {
-      "id":"Lowri Elliott",
-      "name":"Lowri Elliott",
-      "text":"This is an super space for your customers qoute. Don’t worry it works smooth as pie. You will get all what you need by writiing a text here",
-      "imgUrl":"img/reviews/face7.jpg",
-      "alt":"photo"
+      "id": "Lowri Elliott",
+      "name": "Lowri Elliott",
+      "text": "This is an super space for your customers qoute. Don’t worry it works smooth as pie. You will get all what you need by writiing a text here",
+      "imgUrl": "img/reviews/face7.jpg",
+      "alt": "photo"
     }
-    
+  ],
+  "products": [
+    {
+      "id": "01",
+      "title": "Carrots",
+      "rating": "4",
+      "category": "Fruits and vegetables",
+      "descr": "Space for a small description",
+      "actualPrice": "12.43",
+      "datedPrice": "15.34",
+      "imgUrl": [
+        "/img/items/01/carrot01.jpg",
+        "/img/items/01/carrot02.jpg"
+      ],
+      "amount": "154",
+      "measure": "kg",
+      "farm": "Grocery Tarm Fields",
+      "freshness": "1",
+      "sells": "109",
+      "recipe": "From roasts, salads and soups to casseroles and cakes, Carrots will lend sweetness, texture and colour to an enormous number of recipes."
+    },
+    {
+      "id": "02",
+      "title": "Apples",
+      "rating": "4",
+      "category": "Fruits and vegetables",
+      "descr": "An apple is a round fruit with red or green skin and a whitish inside. One variety of apple might be sweet, another sour. The apple isn't just a fruit.",
+      "actualPrice": "5.43",
+      "imgUrl": [
+        "/img/apples.jpg"
+      ],
+      "amount": "100",
+      "measure": "kg",
+      "farm": "Grocery Tarm Fields",
+      "freshness": "1",
+      "sells": "119",
+      "recipe": "Using a sharp knife, slice the apple into thin, even segments, revealing its juicy interior. Finally, spread a generous layer of walnut paste onto each slice, adding a delightful nutty flavor to the refreshing sweetness of the apple.",
+      "reviews": [
+        "This apple was incredibly crisp and refreshing, perfect for a healthy snack.",
+        "The flavor of this apple was exceptional, striking a perfect balance between sweetness and tartness.",
+        "I loved the vibrant red color of this apple, and it tasted as good as it looked.",
+        "The texture of this apple was pleasantly crunchy, making each bite enjoyable.",
+        "This apple had a wonderful aroma that made me eagerly anticipate the first bite.",
+        "I appreciated the natural sweetness of this apple; it didn't need any added sugar.",
+        "The juiciness of this apple made it a juicy and satisfying treat.",
+        "The size of this apple was just right, making it easy to hold and eat on the go.",
+        "I enjoyed the hint of acidity in this apple, which added a nice tang to the overall flavor.",
+        "Overall, this apple exceeded my expectations and left me craving more."
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Peaches",
+      "rating": "4",
+      "category": "Fruits and vegetables",
+      "descr": "Space for a small description",
+      "actualPrice": "5.34",
+      "imgUrl": [
+        "/img/peaches.jpg"
+      ],
+      "amount": "100",
+      "measure": "kg",
+      "farm": "Grocery Tarm Fields",
+      "freshness": "1",
+      "sells": "123",
+      "recipe": "Wash peaches before eating or cooking under clean water, lightly rubbing the surface with your hand or a fruit and vegetable brush. This will remove dirt, bacteria and possible pesticide residues."
+    },
+    {
+      "id": "04",
+      "title": "Bananas",
+      "rating": "4",
+      "category": "Fruits and vegetables",
+      "descr": "Space for a small description",
+      "actualPrice": "5.34",
+      "datedPrice": "8.95",
+      "imgUrl": [
+        "/img/testFoodImg.jpg"
+      ],
+      "amount": "100",
+      "measure": "kg",
+      "farm": "Grocery Tarm Fields",
+      "freshness": "1",
+      "sells": "37",
+      "recipe": "Recipe for bananas"
+    },
+    {
+      "id": "05",
+      "title": "Mango",
+      "rating": "4",
+      "category": "Fruits and vegetables",
+      "descr": "Space for a small description",
+      "actualPrice": "4.54",
+      "datedPrice": "6.72",
+      "imgUrl": [
+        "/img/mango.jpg"
+      ],
+      "amount": "245",
+      "measure": "kg",
+      "farm": "Grocery Tarm Fields",
+      "freshness": "1",
+      "sells": "76",
+      "recipe": "Recipe for mango"
+    },
+    {
+      "id": "06",
+      "title": "Passion fruit",
+      "rating": "4",
+      "category": "Fruits and vegetables",
+      "descr": "Space for a small description",
+      "actualPrice": "7.56",
+      "datedPrice": "9.92",
+      "imgUrl": [
+        "/img/pasfruit.jpg"
+      ],
+      "amount": "245",
+      "measure": "kg",
+      "farm": "Grant's Farm",
+      "freshness": "1",
+      "sells": "54",
+      "recipe": "Recipe for pasfruit"
+    },
+    {
+      "id": "07",
+      "title": "Kauai Coffee Company",
+      "rating": "4",
+      "category": "Drinks",
+      "descr": "Space for a small description",
+      "actualPrice": "30.99",
+      "datedPrice": "42.66",
+      "imgUrl": [
+        "/img/coffee.jpg"
+      ],
+      "amount": "245",
+      "measure": "kg",
+      "farm": "Kauai Coffee Farm",
+      "freshness": "1",
+      "sells": "67",
+      "recipe": "Descr for coffe"
+    }
+  ],
+  "farms": [
+    {
+      "farm": "Grocery Tarm Fields",
+      "descr": "We work hard to ensure that the fruit and vegetables we sell are fresh and high in quality. If we don't grow them ourselves, we source them from carefully chosen suppliers, preferring to buy locally whenever possible."
+    }
   ]
 }
