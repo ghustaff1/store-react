@@ -1,54 +1,82 @@
 import React from 'react';
 import './Cart.scss';
+import CartItem from '../CartItem/CartItem';
+import MainBtn from '../MainBtn';
+import { useSelector } from 'react-redux';
 
 const Cart = () => {
+
+  const { totalPrice, items } = useSelector(state => state.cart)
+  const closeCart = () => {
+    document.querySelector('.cart').classList.remove('open')
+  }
+
+
+
   return (
+    // <div className="cart">
+    //   <div className="cart__top">
+    //     <h2 className="cart__title">Shopping cart</h2>
+    //     <svg onClick={closeCart} width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+    //       <path d="M14.3606 14.36L1.64062 1.63995" stroke="#151515" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="bevel" />
+    //       <path d="M14.3606 1.63995L1.64062 14.36" stroke="#151515" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="bevel" />
+    //     </svg>
+    //   </div>
+    //   <div className='cart__items'>
+    //     {items.map(obj=><CartItem key={obj.id} data={obj}/>)}
+    //   </div>
+    //   <div className="cart__bottom">
+    //     <div className="cart__total">
+    //       <h4 className='cart__total-title'>Total</h4>
+    //       <p className="cart__total-totalPrice">{totalPrice} USD</p>
+    //     </div>
+    //     <div className="cart__order">
+    //       <p className="cart__continue">Continue shopping</p>
+    //       <MainBtn
+    //         size='medium'
+    //         type='2'
+    //         text='Go to Checkout'
+    //       />
+    //     </div>
+    //   </div>
+    // </div>
     <div className="cart">
-      <div className="cart__top">
-        <h2 className="cart__title"></h2>
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M14.3606 14.36L1.64062 1.63995" stroke="#151515" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="bevel" />
-          <path d="M14.3606 1.63995L1.64062 14.36" stroke="#151515" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="bevel" />
-        </svg>
-      </div>
-      {/* cart-item перенести в отдельный компонент */}
-      <div className="cart-item">
-        <div className="cart-item__left">
-          <div className="cart-item__img">
-            <img src="img/apples.jpg" alt="apples" />
-          </div>
-          <div className="cart-item__wishlist">
-            <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M6.15559 1.44502C6.63297 0.967627 7.28045 0.699432 7.95559 0.699432C8.63072 0.699432 9.2782 0.967627 9.75559 1.44502C10.233 1.92241 10.5012 2.56988 10.5012 3.24502C10.5012 3.92015 10.233 4.56763 9.75559 5.04502L9.10059 5.70001L5.50059 9.30001L1.90058 5.70001L1.24558 5.04502C0.768195 4.56763 0.5 3.92015 0.5 3.24502C0.5 2.56988 0.768195 1.92241 1.24558 1.44502C1.72297 0.967627 2.37045 0.699432 3.04558 0.699432C3.72072 0.699432 4.36819 0.967627 4.84558 1.44502L5.50059 2.10002L6.15559 1.44502Z" stroke="#151515" stroke-linecap="round" stroke-linejoin="bevel" />
+      <div className="container">
+        <div className="cart__top">
+          <h2 className="cart__title">Shopping cart</h2>
+          <div className="cart__clear">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2.5 5H4.16667H17.5" stroke="#B6B6B6" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"></path><path d="M6.66663 5.00001V3.33334C6.66663 2.89131 6.84222 2.46739 7.15478 2.15483C7.46734 1.84227 7.89127 1.66667 8.33329 1.66667H11.6666C12.1087 1.66667 12.5326 1.84227 12.8451 2.15483C13.1577 2.46739 13.3333 2.89131 13.3333 3.33334V5.00001M15.8333 5.00001V16.6667C15.8333 17.1087 15.6577 17.5326 15.3451 17.8452C15.0326 18.1577 14.6087 18.3333 14.1666 18.3333H5.83329C5.39127 18.3333 4.96734 18.1577 4.65478 17.8452C4.34222 17.5326 4.16663 17.1087 4.16663 16.6667V5.00001H15.8333Z" stroke="#B6B6B6" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"></path><path d="M8.33337 9.16667V14.1667" stroke="#B6B6B6" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"></path><path d="M11.6666 9.16667V14.1667" stroke="#B6B6B6" stroke-width="1.2" strokeLinecap="round" strokeLinejoin="round"></path>
             </svg>
-            <p>Wishlist</p>
-          </div>
-          <div className="cart-item__remove">
-            <svg width="9" height="8" viewBox="0 0 9 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M7.68031 7.17999L1.32031 0.819992" stroke="#151515" stroke-linecap="round" stroke-linejoin="bevel" />
-              <path d="M7.68031 0.819992L1.32031 7.17999" stroke="#151515" stroke-linecap="round" stroke-linejoin="bevel" />
-            </svg>
-            <p>Remove</p>
+            <p>Clear cart</p>
           </div>
         </div>
-        <div className="cart-item__right">
-          <h3 className="cart-item__title">Apples</h3>
-          <ul className="cart-item__specs specs">
-            <li>
-              <p className='specs__spec'>Farm</p>
-              <p className='specs__content'>Tharamis farm</p>
-            </li>
-            <li>
-              <p lassName='specs__spec'>Freshness</p>
-              <p className='specs__content'>1 day old</p>
-            </li>
-          </ul>
-          <div className="cart-item__order">
-            <div className="cart-item__prices">
-              <p className="cart-item__actualPrice">23.42</p>
-              <s className="cart-item__datedPrice">25.43</s>
-            </div>
-            <div className="cart-item__amount"></div>
+        <div className="cart__items">
+          {items.map(obj => <CartItem key={obj.id} data={obj} />)}
+          
+        </div>
+        <div className="cart__bottom">
+          <div className="cart__details">
+            <span >
+              <p>Amount:</p>
+              <p className="cart__amount">{items.length} pcs.</p>
+            </span>
+            <span>
+              <p>Total:</p>
+              <p className='cart__totalPrice'>{totalPrice} USD</p>
+            </span>
+          </div>
+          <div className="cart__nav">
+            <MainBtn className="cart__goBackBtn"
+              size='medium'
+              type='3'
+              text='Continue shopping'
+              dir='prev' />
+            <MainBtn className="cart__paymentBtn"
+              size='medium'
+              type='2'
+              text='Go to checkout'
+              dir='next' />
           </div>
         </div>
       </div>

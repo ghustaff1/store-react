@@ -6,10 +6,10 @@ import { Link } from 'react-router-dom';
 const ProductCard = ({ title, descr, imgUrl, actualPrice, datedPrice, id }) => {
 
   const sale = datedPrice ? Math.round((1 - actualPrice / datedPrice) * 100) : null;
-  const link = `items/${id}`;
+  
   return (
     <div className="productCard">
-      <Link to={link}>
+      <Link to={`items/${id}`}>
         {sale && <div className="productCard__sale">- {sale} %</div>}
         <div className='productCard__img'>
           <img src={imgUrl[0]} alt={title} />

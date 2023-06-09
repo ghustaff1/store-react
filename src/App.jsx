@@ -7,16 +7,16 @@ import './scss/app.scss';
 import MainLayout from './layouts/MainLayout';
 import BestFarmers from './components/HomePage/BestFarmers/BestFarmers';
 import Product from './pages/Product/Product';
+import Cart from './components/Cart/Cart';
 
 
 function App() {
   return (
     <Routes>
       <Route path='/' element={<MainLayout />}>
-        {/* <Route path='' element={<Home />} /> */}
         <Route path='' element={<Home />} />
         <Route path='items/:id' element={<Product />} />
-        {/* <Route path='test' element={<BestFarmers />}/> */}
+        <Route path='/cart' element={<Cart/>}/>
       </Route>
     </Routes>
   );

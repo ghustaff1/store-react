@@ -19,10 +19,6 @@ const BestFarmers = () => {
     fetchBestFarmers();
   }, []);
 
-  console.log(data)
-  console.log(links)
-
-  //кофе и другие продукты перенести в product db.json
   return (
     <HomeSaleSection 
     title='Best from Farmers'
