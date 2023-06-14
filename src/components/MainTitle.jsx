@@ -16,4 +16,4 @@ const MainTitle = ({value}) => {
   )
 }
 
-export default MainTitle
+export default MainTitle;

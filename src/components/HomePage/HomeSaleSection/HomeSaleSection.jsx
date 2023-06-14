@@ -2,7 +2,7 @@ import React from 'react'
 import './HomeSaleSection.scss';
 import MainBtn from '../../MainBtn';
 import GreenLink from '../../GreenLink';
-import ProductCard from '../ProductCard/ProductCard';
+import ProductCard from '../../ProductCard/ProductCard';
 import AsideTitle from '../../AsideTitle';
 
 

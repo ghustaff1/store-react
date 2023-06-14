@@ -1,0 +1,60 @@
+.category {
+  padding-top: 48px;
+
+  .top {
+    &__head {
+      display: flex;
+      justify-content: space-between;
+    }
+    &__view {
+      display: flex;
+      gap: 24px;
+      div {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+      }
+    }
+    &__productsAmount {
+      span {
+        background-color: #f4f8ec;
+        color: #6a983c;
+        border-radius: 12px;
+        padding: 1px 5px;
+      }
+    }
+  }
+
+  .filters {
+    &__price {
+      padding: 9px 16px;
+      background-color: #f9f9f9;
+      border: 1px solid #d1d1d1;
+      border-radius: 12px;
+      display: inline-flex;
+      align-items: center;
+      gap: 16px;
+      div {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+    }
+  }
+
+  .aside {
+    flex: 0 0 25%;
+  }
+  .main {
+    padding-top: 64px;
+    display: flex;
+    gap: 25px;
+    &__items {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: 1fr;
+      grid-column-gap: 30px;
+      grid-row-gap: 30px;
+    }
+  }
+}

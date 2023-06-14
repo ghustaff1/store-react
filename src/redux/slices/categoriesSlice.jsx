@@ -35,5 +35,10 @@ const categoriesSlice = createSlice({
 export const getPathByCategory = (category) => {
   return '/categories/' + Object.keys(initialState.links.find(obj => Object.values(obj)[0] === category))[0];
 }
+export const getCategoryFromPath = (path) => {
+  // return '/categories/' + Object.keys(initialState.links.find(obj => Object.values(obj)[0] === category))[0];
+  // console.log(path)
+  return Object.values(initialState.links.find(obj =>Object.keys(obj)[0] === path))[0];
+}
 
 export default categoriesSlice.reducer;
