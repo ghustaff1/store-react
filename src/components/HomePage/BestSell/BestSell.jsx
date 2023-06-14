@@ -1,34 +1,30 @@
 import React from 'react'
 import axios from 'axios';
 import HomeSaleSection from '../HomeSaleSection/HomeSaleSection';
+import { useSelector } from 'react-redux';
 
 const BestSell = () => {
 
   const [data, setData] = React.useState([]);
-  const [links, setLinks]=React.useState([]);
 
   const fetchBestSell = async () => {
     await axios.get('http://localhost:8000/products')
-      .then(res => setData(res.data.sort((a,b)=>b.sells-a.sells).slice(0,3)));
+      .then(res => setData(res.data.sort((a, b) => b.sells - a.sells).slice(0, 3)));
   }
-  const fetchLinks = async () => {
-    await axios.get('http://localhost:8000/categories')
-      .then(res => setLinks(res.data.map(obj=>obj.title)));
-  }
+  const categories=useSelector(({categories})=>categories.categories.map(obj=>obj.category));
 
   React.useEffect(() => {
     fetchBestSell();
-    fetchLinks();
   }, [])
 
-  
+
 
   return (
-    <HomeSaleSection  
-    title="Best selling products"
-    data={data} 
-    links={links}
-    className='bestSell'/>
+    <HomeSaleSection
+      title="Best selling products"
+      data={data}
+      links={categories}
+      className='bestSell' />
   )
 }
 

@@ -4,14 +4,23 @@ import BestSell from '../../components/HomePage/BestSell/BestSell';
 import BestFarmers from '../../components/HomePage/BestFarmers/BestFarmers';
 import Reviews from '../../components/HomePage/Reviews/Reviews';
 import Cart from '../../components/Cart/Cart';
+import { useDispatch } from 'react-redux';
+import { fetchCategories } from '../../redux/slices/categoriesSlice';
 
 const Home = () => {
 
+  const dispatch = useDispatch();
+
+  React.useEffect(() => {
+    dispatch(fetchCategories());
+  }, [])
+
+
   return (
     <div className="home">
-      <BestSell/>
-      <BestFarmers/>
-      <Reviews/>
+      <BestSell />
+      <BestFarmers />
+      <Reviews />
     </div>
   )
 }

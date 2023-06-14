@@ -7,10 +7,10 @@ const Title = styled.h2`
   font-size: 18px;
   line-height: 1.5;
 `;
-const HomeSectionTitle = ({title}) => {
+const AsideTitle = ({title}) => {
   return (
     <Title>{title}</Title>
   )
 }
 
-export default HomeSectionTitle;
+export default AsideTitle;

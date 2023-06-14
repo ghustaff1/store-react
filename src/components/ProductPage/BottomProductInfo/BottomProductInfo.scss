@@ -1,4 +1,4 @@
-.BaseProductInfo{
+.BottomProductInfo{
   &__categories{
     display: flex;
     //justify-content: space-around;
@@ -18,20 +18,6 @@
     &.active{
       border-bottom: 2px solid #6A983C;
     }
-  }
-  &__farm{
-    font-family: "Poppins", sans-serif;
-    color:#151515;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.3;
-    margin-bottom: 5px;
-  }
-  &__farmDescr{
-    font-size: 15px;
-    color:#151515;
-    line-height: 1.3;
-    margin-bottom: 32px;
   }
   &__review{
     padding: 10px 10px;

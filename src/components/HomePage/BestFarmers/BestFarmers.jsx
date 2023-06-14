@@ -21,7 +21,7 @@ const BestFarmers = () => {
 
   return (
     <HomeSaleSection 
-    title='Best from Farmers'
+    title='Best Farmers'
     data={data} 
     links={links}
     className='bestFarmers'/>

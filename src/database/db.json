@@ -1,35 +1,35 @@
 {
   "categories": [
     {
-      "title": "Bakery",
-      "subTitles": [
-        "Bread",
-        "Croissants",
-        "Panini"
+      "category": "Bakery",
+      "categoryFarms": [
+        "Sunshine Fields",
+        "Sweet Clover Acres",
+        "Crunchy Farm"
       ]
     },
     {
-      "title": "Fruits and vegerables",
-      "subTitles": [
-        "Apples",
-        "Bananas",
-        "Peaches"
+      "category": "Fruits and vegetables",
+      "categoryFarms": [
+        "Golden Valley",
+        "Dragon Hill Ranch",
+        "Blueberry Hill Ridge"
       ]
     },
     {
-      "title": "Meat and fish",
-      "subTitles": [
-        "Pork",
-        "Salmon",
-        "Duck"
+      "category": "Meat and fish",
+      "categoryFarms": [
+        "Gusty Goat Farm",
+        "Moo Moo Farm",
+        "Windy Bottom Homestead"
       ]
     },
     {
-      "title": "Drinks",
-      "subTitles": [
-        "Cola",
-        "Still water",
-        "Orange juice"
+      "category": "Drinks",
+      "categoryFarms": [
+        "Kauai Coffee Farm", 
+        "Honeybuzz Meadow",
+        "Sweet Milk Acres"
       ]
     }
   ],
@@ -38,7 +38,7 @@
       "John Cardy's farm",
       "Maui Tropical Plantation",
       "Grant's Farm",
-      "Kauai Coffee Company"
+      "Kauai Coffee Farm"
     ],
     "products": [
       {
@@ -79,7 +79,7 @@
       },
       {
         "id": "07",
-        "title": "Kauai Coffee Company",
+        "title": "Kauai Coffee",
         "rating": "4",
         "category": "Drinks",
         "descr": "Space for a small description",
@@ -152,7 +152,7 @@
     {
       "id": "01",
       "title": "Carrots",
-      "rating": "4",
+      "rating": "5",
       "category": "Fruits and vegetables",
       "descr": "Space for a small description",
       "actualPrice": "12.43",
@@ -180,21 +180,41 @@
       ],
       "amount": "100",
       "measure": "kg",
-      "farm": "Grocery Tarm Fields",
+      "farm": "Dragon Hill Ranch",
       "freshness": "1",
       "sells": "119",
       "recipe": "Using a sharp knife, slice the apple into thin, even segments, revealing its juicy interior. Finally, spread a generous layer of walnut paste onto each slice, adding a delightful nutty flavor to the refreshing sweetness of the apple.",
       "reviews": [
-        "This apple was incredibly crisp and refreshing, perfect for a healthy snack.",
-        "The flavor of this apple was exceptional, striking a perfect balance between sweetness and tartness.",
-        "I loved the vibrant red color of this apple, and it tasted as good as it looked.",
-        "The texture of this apple was pleasantly crunchy, making each bite enjoyable.",
-        "This apple had a wonderful aroma that made me eagerly anticipate the first bite.",
-        "I appreciated the natural sweetness of this apple; it didn't need any added sugar.",
-        "The juiciness of this apple made it a juicy and satisfying treat.",
-        "The size of this apple was just right, making it easy to hold and eat on the go.",
-        "I enjoyed the hint of acidity in this apple, which added a nice tang to the overall flavor.",
-        "Overall, this apple exceeded my expectations and left me craving more."
+        {
+          "name":"Agata Smith",
+          "imgUrl":"img/reviews/face1.jpg",
+          "rating":"5",
+          "text":"This apple was incredibly crisp and refreshing, perfect for a healthy snack."
+        },
+        {
+          "name":"Estelle Chavez",
+          "imgUrl":"img/reviews/face2.jpg",
+          "rating":"4",
+          "text":"The flavor of this apple was exceptional, striking a perfect balance between sweetness and tartness."
+        },
+        {
+          "name":"Janice Yates",
+          "imgUrl":"img/reviews/face3.jpg",
+          "rating":"5",
+          "text":"I loved the vibrant red color of this apple, and it tasted as good as it looked."
+        },
+        {
+          "name":"Kimberly Vargas",
+          "imgUrl":"img/reviews/face4.jpg",
+          "rating":"2",
+          "text":"This apple had a not good aroma that made me disgust the first bite."
+        },
+        {
+          "name":"Lenny Coffey",
+          "imgUrl":"img/reviews/face5.jpg",
+          "rating":"5",
+          "text":"The texture of this apple was pleasantly crunchy, making each bite enjoyable."
+        }
       ]
     },
     {
@@ -209,7 +229,7 @@
       ],
       "amount": "100",
       "measure": "kg",
-      "farm": "Grocery Tarm Fields",
+      "farm": "Blueberry Hill Ridge",
       "freshness": "1",
       "sells": "123",
       "recipe": "Wash peaches before eating or cooking under clean water, lightly rubbing the surface with your hand or a fruit and vegetable brush. This will remove dirt, bacteria and possible pesticide residues."
@@ -227,7 +247,7 @@
       ],
       "amount": "100",
       "measure": "kg",
-      "farm": "Grocery Tarm Fields",
+      "farm": "Blueberry Hill Ridge",
       "freshness": "1",
       "sells": "37",
       "recipe": "Recipe for bananas"
@@ -235,7 +255,7 @@
     {
       "id": "05",
       "title": "Mango",
-      "rating": "4",
+      "rating": "3",
       "category": "Fruits and vegetables",
       "descr": "Space for a small description",
       "actualPrice": "4.54",
@@ -270,7 +290,7 @@
     },
     {
       "id": "07",
-      "title": "Kauai Coffee Company",
+      "title": "Kauai Coffee",
       "rating": "4",
       "category": "Drinks",
       "descr": "Space for a small description",
@@ -290,6 +310,30 @@
   "farms": [
     {
       "farm": "Grocery Tarm Fields",
+      "descr": "We work hard to ensure that the fruit and vegetables we sell are fresh and high in quality. If we don't grow them ourselves, we source them from carefully chosen suppliers, preferring to buy locally whenever possible."
+    },
+    {
+      "farm": "Golden Valley",
+      "descr": "We work hard to ensure that the fruit and vegetables we sell are fresh and high in quality. If we don't grow them ourselves, we source them from carefully chosen suppliers, preferring to buy locally whenever possible."
+    },
+    {
+      "farm": "Dragon Hill Ranch",
+      "descr": "We work hard to ensure that the fruit and vegetables we sell are fresh and high in quality. If we don't grow them ourselves, we source them from carefully chosen suppliers, preferring to buy locally whenever possible."
+    },
+    {
+      "farm": "Blueberry Hill Ridge",
+      "descr": "We work hard to ensure that the fruit and vegetables we sell are fresh and high in quality. If we don't grow them ourselves, we source them from carefully chosen suppliers, preferring to buy locally whenever possible."
+    },
+    {
+      "farm": "Kauai Coffee Farm",
+      "descr": "We work hard to ensure that the fruit and vegetables we sell are fresh and high in quality. If we don't grow them ourselves, we source them from carefully chosen suppliers, preferring to buy locally whenever possible."
+    },
+    {
+      "farm": "Honeybuzz Meadow",
+      "descr": "We work hard to ensure that the fruit and vegetables we sell are fresh and high in quality. If we don't grow them ourselves, we source them from carefully chosen suppliers, preferring to buy locally whenever possible."
+    },
+    {
+      "farm": "Sweet Milk Acres",
       "descr": "We work hard to ensure that the fruit and vegetables we sell are fresh and high in quality. If we don't grow them ourselves, we source them from carefully chosen suppliers, preferring to buy locally whenever possible."
     }
   ]

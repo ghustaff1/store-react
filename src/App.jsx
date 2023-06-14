@@ -8,6 +8,7 @@ import MainLayout from './layouts/MainLayout';
 import BestFarmers from './components/HomePage/BestFarmers/BestFarmers';
 import Product from './pages/Product/Product';
 import Cart from './components/Cart/Cart';
+import Category from './pages/Category/Category';
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Route path='' element={<Home />} />
         <Route path='items/:id' element={<Product />} />
         <Route path='/cart' element={<Cart/>}/>
+        <Route path='/category/:cat' element={<Category/>}/>
       </Route>
     </Routes>
   );

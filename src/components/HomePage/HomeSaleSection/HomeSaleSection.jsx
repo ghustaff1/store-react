@@ -1,20 +1,20 @@
 import React from 'react'
-import './HomeProductsSection.scss';
+import './HomeSaleSection.scss';
 import MainBtn from '../../MainBtn';
 import GreenLink from '../../GreenLink';
 import ProductCard from '../ProductCard/ProductCard';
-import HomeSectionTitle from '../../HomeSectionTitle';
+import AsideTitle from '../../AsideTitle';
 
 
 const HomeSaleSection = ({ title, data, links, className }) => {
 
   
   return (
-    <div className={`homeSection ${className}`}>
+    <div className={`HomeSaleSection ${className}`}>
       <div className="container">
-        <div className='homeSection__wrapper'>
-          <aside className='homeSection__aside'>
-            <HomeSectionTitle title={title} />
+        <div className='HomeSaleSection__wrapper'>
+          <aside className='HomeSaleSection__aside'>
+            <AsideTitle title={title} />
             <ul>
               {links?.map(link => {
                 return <li key={link}><GreenLink underline={true} value={link} /></li>;
@@ -22,13 +22,14 @@ const HomeSaleSection = ({ title, data, links, className }) => {
             </ul>
             <MainBtn type='3' size='medium' text='More products' dir='next' />
           </aside>
-          <div className='homeSection__cards'>
+          <div className='HomeSaleSection__cards'>
             {data?.map(obj => <ProductCard key={obj.id} {...obj} />)}
           </div>
         </div>
       </div>
     </div>
   )
-}
+};
+
 
 export default HomeSaleSection;

@@ -4,13 +4,12 @@ import './Header.scss';
 import GreenLink from '../GreenLink';
 import Search from '../Search/Search';
 import Categories from '../Categories/Categories';
+import { useSelector } from 'react-redux';
 
 
 const Header = () => {
 
-  const openCart=()=>{
-    document.querySelector('.cart').classList.add('open')
-  }
+  const cartItemsAmount=useSelector(({cart})=>cart.items.length);
 
   return (
     <div className="header">
@@ -61,7 +60,9 @@ const Header = () => {
                 <path d="M9.79941 2.14993L6.89941 7.28993" stroke="#151515" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
                 <path d="M13.8799 2.14993L16.7899 7.28993" stroke="#151515" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
-
+              <div className='user-cart__amount'>
+                {cartItemsAmount}
+                </div>
             </Link>
           </div>
         </div>

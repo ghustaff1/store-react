@@ -7,6 +7,7 @@ font-size:32px;
 lint-height:1.5;
 font-weight:600;
 color:#151515;
+margin-bottom:16px;
 `;
 
 const MainTitle = ({value}) => {

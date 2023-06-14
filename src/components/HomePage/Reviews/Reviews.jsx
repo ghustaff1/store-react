@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import './Reviews.scss';
-import HomeSectionTitle from '../../HomeSectionTitle';
+import HomeSectionTitle from '../../AsideTitle';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, A11y } from 'swiper';
 import { useSwiper } from 'swiper/react';
@@ -21,7 +21,6 @@ const Reviews = () => {
     getReviwsData();
   }, []);
 
-  const swiper=useSwiper();
 
   return (
     <div className="reviews">

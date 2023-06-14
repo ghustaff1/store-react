@@ -1,8 +1,13 @@
 import React from 'react'
 import './Search.scss';
+import { useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
+import { getPathByCategory } from '../../redux/slices/categoriesSlice';
 
 const Search = () => {
   const [open, setOpen] = React.useState(false);
+  const categories = useSelector(({ categories }) => categories.categories);
+
 
   return (
     <div className="searchBlock">
@@ -18,10 +23,15 @@ const Search = () => {
         open && (
           <div className="searchBlock-popup">
             <ul>
-              <li className='active'>Bakery</li>
-              <li>Fruits and vegetables</li>
-              <li>Meat and fish</li>
-              <li>Drinks</li>
+              {
+                categories.map((obj, i) => {
+                  const link = getPathByCategory(obj.category);
+                  return (<li key={i}>
+                    <Link to={link}>{obj.category}</Link>
+                  </li>)
+                }
+                )
+              }
             </ul>
           </div>
         )
