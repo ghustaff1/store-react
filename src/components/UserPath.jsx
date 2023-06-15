@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { useSelector } from 'react-redux';
-import { getPathByCategory } from '../redux/slices/categoriesSlice';
+import { getCategoryFromPath, getPathByCategory } from '../redux/slices/categoriesSlice';
 const UserPathWrapper = styled.div`
 margin-bottom:24px;
 font-size:16px;
@@ -21,12 +21,13 @@ const UserPath = ({ path }) => {
       {path.map((title, i) => {
         return i !== path.length - 1 ?
           <Link
-            key={title}
+            key={title + i}
             to={
-              getPathByCategory(title)
+              //getPathByCategory(title)
+              `/categories/${title}`
             }
-            style={{ color: '#A9A9A9' }}>{title} /</Link> :
-          <span key={title}>{title}</span>;
+            style={{ color: '#A9A9A9' }}>{getCategoryFromPath(title)} /</Link> :
+          <span key={title + i}>{title}</span>;
       })}
     </UserPathWrapper>
   )

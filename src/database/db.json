@@ -1,7 +1,7 @@
 {
   "categories": [
     {
-      "category": "Bakery",
+      "category": "bakery",
       "categoryFarms": [
         "Sunshine Fields",
         "Sweet Clover Acres",
@@ -9,7 +9,7 @@
       ]
     },
     {
-      "category": "Fruits and vegetables",
+      "category": "frnveg",
       "categoryFarms": [
         "Golden Valley",
         "Dragon Hill Ranch",
@@ -17,7 +17,7 @@
       ]
     },
     {
-      "category": "Meat and fish",
+      "category": "meatnfish",
       "categoryFarms": [
         "Gusty Goat Farm",
         "Moo Moo Farm",
@@ -25,7 +25,7 @@
       ]
     },
     {
-      "category": "Drinks",
+      "category": "drinks",
       "categoryFarms": [
         "Kauai Coffee Farm", 
         "Honeybuzz Meadow",
@@ -45,7 +45,7 @@
         "id": "05",
         "title": "Mango",
         "rating": "4",
-        "category": "Fruits and vegetables",
+        "category": "frnveg",
         "descr": "Space for a small description",
         "actualPrice": "4.54",
         "datedPrice": "6.72",
@@ -153,7 +153,7 @@
       "id": "01",
       "title": "Carrots",
       "rating": "2",
-      "category": "Fruits and vegetables",
+      "category": "frnveg",
       "descr": "Space for a small description",
       "actualPrice": "12.43",
       "datedPrice": "15.34",
@@ -172,7 +172,7 @@
       "id": "02",
       "title": "Apples",
       "rating": "4",
-      "category": "Fruits and vegetables",
+      "category": "frnveg",
       "descr": "An apple is a round fruit with red or green skin and a whitish inside. One variety of apple might be sweet, another sour. The apple isn't just a fruit.",
       "actualPrice": "5.43",
       "imgUrl": [
@@ -221,7 +221,7 @@
       "id": "03",
       "title": "Peaches",
       "rating": "4",
-      "category": "Fruits and vegetables",
+      "category": "frnveg",
       "descr": "Space for a small description",
       "actualPrice": "5.34",
       "imgUrl": [
@@ -238,7 +238,7 @@
       "id": "04",
       "title": "Bananas",
       "rating": "4",
-      "category": "Fruits and vegetables",
+      "category": "frnveg",
       "descr": "Space for a small description",
       "actualPrice": "5.34",
       "datedPrice": "8.95",
@@ -256,7 +256,7 @@
       "id": "05",
       "title": "Mango",
       "rating": "3",
-      "category": "Fruits and vegetables",
+      "category": "frnveg",
       "descr": "Space for a small description",
       "actualPrice": "4.54",
       "datedPrice": "6.72",
@@ -274,7 +274,7 @@
       "id": "06",
       "title": "Passion fruit",
       "rating": "4",
-      "category": "Fruits and vegetables",
+      "category": "frnveg",
       "descr": "Space for a small description",
       "actualPrice": "7.56",
       "datedPrice": "9.92",
@@ -292,7 +292,7 @@
       "id": "07",
       "title": "Kauai Coffee",
       "rating": "4",
-      "category": "Drinks",
+      "category": "drinks",
       "descr": "Space for a small description",
       "actualPrice": "30.99",
       "datedPrice": "42.66",

@@ -3,6 +3,7 @@ import './Categories.scss';
 import CategoriesItem from '../CategoriesItem/CategoriesItem';
 import axios from 'axios';
 import { useSelector } from 'react-redux';
+import { getCategoryFromPath } from '../../redux/slices/categoriesSlice';
 
 const Categories = () => {
   const [categoriesData, setCategoriesData] = React.useState([]);
@@ -14,8 +15,8 @@ const Categories = () => {
   // React.useEffect(() => {
   //   fetchCategories();
   // }, [])
-  const categories=useSelector(({categories})=>categories).categories;
-  //console.log(categories)
+  const {categories} = useSelector(({ categories }) => categories);
+
 
 
 
@@ -24,9 +25,11 @@ const Categories = () => {
       <div className='container'>
         <ul className='categories-list'>
           {
-            categories.map((obj) => 
-            <CategoriesItem
-              key={obj.category} {...obj}/>
+            categories.map((obj) =>
+              <CategoriesItem
+                key={obj.category}
+                category={getCategoryFromPath(obj.category)}
+                categoryFarms={obj.categoryFarms} />
             )
           }
         </ul>

@@ -9,11 +9,11 @@ import { fetchCategories } from '../../redux/slices/categoriesSlice';
 
 const Home = () => {
 
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
-  React.useEffect(() => {
-    dispatch(fetchCategories());
-  }, [])
+  // React.useEffect(() => {
+  //   dispatch(fetchCategories());
+  // }, [])
 
 
   return (

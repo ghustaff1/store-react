@@ -28,13 +28,17 @@ const categoriesSlice = createSlice({
   extraReducers: (builder) => {
     builder.addCase(fetchCategories.fulfilled, (state, action) => {
       state.categories = action.payload;
+    });
+    builder.addCase(fetchCategories.rejected, (state, action) => {
+      console.log('error fetching catefories')
+      state.categories = action.payload;
     })
   }
 });
 
-export const getPathByCategory = (category) => {
-  return '/categories/' + Object.keys(initialState.links.find(obj => Object.values(obj)[0] === category))[0];
-}
+// export const getPathByCategory = (category) => {
+//   return '/categories/' + Object.keys(initialState.links.find(obj => Object.values(obj)[0] === category))[0];
+// }
 export const getCategoryFromPath = (path) => {
   // return '/categories/' + Object.keys(initialState.links.find(obj => Object.values(obj)[0] === category))[0];
   // console.log(path)

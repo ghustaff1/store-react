@@ -7,8 +7,8 @@ const Reviews = ({reviews}) => {
 
   return (
     <ul className="reviews">
-      {reviews.map(obj=>
-        <li className="review">
+      {reviews && reviews.map(obj=>
+        <li key={obj.name} className="review">
             <div className="review__person">
               <div className="review__img">
                 <img src={obj.imgUrl} alt="img" />
@@ -16,7 +16,7 @@ const Reviews = ({reviews}) => {
               <p className='review__name'>{obj.name}</p>
             </div>
             <div className="review__rate">
-            <Rating rate='4' color='gold'/>
+            <Rating itemName={obj.name+'review'} rate='4' color='gold'/>
             </div>
         </li>
         )}

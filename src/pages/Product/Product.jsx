@@ -72,7 +72,7 @@ const Product = () => {
           <div className="product__content">
             <MainTitle value={data.title} />
             {/* rating */}
-            <Rating rate={data.rating} color='gold'/>
+            <Rating itemName={data.title} rate={data.rating} color='gold'/>
             <p className="product__descr">{data.descr}</p>
             <dl className="product__info">
               <div>

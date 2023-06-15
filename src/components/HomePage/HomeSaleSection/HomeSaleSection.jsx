@@ -23,7 +23,7 @@ const HomeSaleSection = ({ title, data, links, className }) => {
             <MainBtn type='3' size='medium' text='More products' dir='next' />
           </aside>
           <div className='HomeSaleSection__cards'>
-            {data?.map(obj => <ProductCard key={obj.id} {...obj} />)}
+            {data?.map(obj => <ProductCard key={obj.id} {...obj} view='grid'/>)}
           </div>
         </div>
       </div>
