@@ -163,7 +163,7 @@
       ],
       "amount": "154",
       "measure": "kg",
-      "farm": "Grocery Tarm Fields",
+      "farm": "Golden Valley",
       "freshness": "1",
       "sells": "109",
       "recipe": "From roasts, salads and soups to casseroles and cakes, Carrots will lend sweetness, texture and colour to an enormous number of recipes."
@@ -247,7 +247,7 @@
       ],
       "amount": "100",
       "measure": "kg",
-      "farm": "Blueberry Hill Ridge",
+      "farm": "Golden Valley",
       "freshness": "1",
       "sells": "37",
       "recipe": "Recipe for bananas"
@@ -283,7 +283,7 @@
       ],
       "amount": "245",
       "measure": "kg",
-      "farm": "Grant's Farm",
+      "farm": "Dragon Hill Ranch",
       "freshness": "1",
       "sells": "54",
       "recipe": "Recipe for pasfruit"
