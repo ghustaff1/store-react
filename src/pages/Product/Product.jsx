@@ -6,7 +6,8 @@ import MainTitle from '../../components/MainTitle';
 import AddToWishList from '../../components/ProductPage/AddToWishList/AddToWishList';
 import BottomProductInfo from '../../components/ProductPage/BottomProductInfo/BottomProductInfo';
 import { useDispatch, useSelector } from 'react-redux';
-import { addItem, removeItem } from '../../redux/slices/cartSlice';
+import { addToCart, removeFromCart } from '../../redux/slices/cartSlice';
+import { addToWishList, removeFromWishlist } from '../../redux/slices/wishlistSlice';
 import UserPath from '../../components/UserPath';
 import Rating from '../../components/Rating/Rating';
 
@@ -21,6 +22,7 @@ const Product = () => {
   const { id } = useParams();
 
   const carted = useSelector(state => state.cart.items.find(obj => obj.id === id));
+  const wishlisted = useSelector(({ wishlist }) => wishlist.items.includes(id));
 
   React.useEffect(() => {
     const fetchData = async () => {
@@ -46,17 +48,24 @@ const Product = () => {
 
   const onToggleCart = () => {
     carted ?
-      dispatch(removeItem({
+      dispatch(removeFromCart({
         id,
         price: 12 //temp
       })) :
-      dispatch(addItem({
+      dispatch(addToCart({
         id,
         amount,
         price: amount * +data.actualPrice
       }))
 
   }
+
+  const onToggleWishlist = () => {
+    wishlisted ?
+      dispatch(removeFromWishlist(id)) :
+      dispatch(addToWishList(id));
+  }
+
 
   if (loading) { return <div>Loading</div> }; //может быть удалить
 
@@ -72,7 +81,7 @@ const Product = () => {
           <div className="product__content">
             <MainTitle value={data.title} />
             {/* rating */}
-            <Rating itemName={data.title} rate={data.rating} color='gold'/>
+            <Rating itemName={data.title} rate={data.rating} color='gold' />
             <p className="product__descr">{data.descr}</p>
             <dl className="product__info">
               <div>
@@ -129,7 +138,13 @@ const Product = () => {
                 </button>
               </div>
             </div>
-            <AddToWishList />
+            <div className="product__wishlist" onClick={onToggleWishlist}>
+              <svg style={{ fill: wishlisted ? '#E6704B' : 'none' }} width="20" height="17" viewBox="0 0 16 15" xmlns="http://www.w3.org/2000/svg">
+                <path fillRule="evenodd" clipRule="evenodd" d="M8.62281 2.76001C9.25933 2.12349 10.1226 1.7659 11.0228 1.7659C11.923 1.7659 12.7863 2.12349 13.4228 2.76001C14.0593 3.39653 14.4169 4.25984 14.4169 5.16001C14.4169 6.06019 14.0593 6.92349 13.4228 7.56001L12.5495 8.43334L7.74948 13.2333L2.94948 8.43334L2.07614 7.56001C1.43962 6.92349 1.08203 6.06019 1.08203 5.16001C1.08203 4.25984 1.43962 3.39653 2.07614 2.76001C2.71266 2.12349 3.57597 1.7659 4.47614 1.7659C5.37632 1.7659 6.23962 2.12349 6.87614 2.76001L7.74948 3.63334L8.62281 2.76001Z" stroke="#E6704B" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+              <p>Add to my wish list</p>
+            </div>
+            {/* <AddToWishList /> */}
             <BottomProductInfo farm={data.farm}
               recipe={data.recipe}
               reviews={data.reviews}
@@ -138,7 +153,7 @@ const Product = () => {
         </div>
       </div>
     </div>
-    
+
   )
 }
 

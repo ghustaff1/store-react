@@ -7,6 +7,7 @@ import { getCategoryFromPath } from '../../redux/slices/categoriesSlice'
 import AsideTitle from '../../components/AsideTitle';
 import Rating from '../../components/Rating/Rating';
 import axios from 'axios';
+import { useSelector } from 'react-redux';
 import ProductCard from '../../components/ProductCard/ProductCard';
 
 const viewType = ['grid', 'list']
@@ -17,6 +18,11 @@ const Category = () => {
   const [items, setItems] = React.useState();
   const [farms, setFarms] = React.useState();
   const [chosenFarms, setChosenFarms] = React.useState([]);
+  const [chosenRating, setChosenRating] = React.useState([]);
+
+  const  wishListItems  = useSelector(({ wishlist }) => wishlist.items);
+  console.log(wishListItems)
+
 
   const gridBtn = React.useRef(null);
   const listBtn = React.useRef(null);
@@ -34,6 +40,7 @@ const Category = () => {
       .then(res => {
         setFarms(res.data[0].categoryFarms.map(farm => farm))
       });
+    
   }, []);
 
   React.useEffect(() => {
@@ -46,17 +53,22 @@ const Category = () => {
               res.data.sort((a, b) => a.actualPrice - b.actualPrice);
           }
           if (chosenFarms.length) {
-            console.log('in fetch', chosenFarms)
             res.data = res.data.filter(obj => {
               return chosenFarms.includes(obj.farm)
             })
           }
-          console.log(res.data)
+          if (chosenRating.length) {
+            // console.log(chosenRating)
+            res.data = res.data.filter(obj => {
+              return chosenRating.includes(+obj.rating)
+            })
+          }
+          // console.log(res.data)
           setItems(res.data)
         });
     };
     fetchItems();
-  }, [category, sortPrice, chosenFarms]); //может изменится если будет другая бд
+  }, [category, sortPrice, chosenFarms, chosenRating]); //может изменится если будет другая бд
 
 
   const onChangeView = (view) => {
@@ -97,6 +109,19 @@ const Category = () => {
   };
 
 
+  const onAddRating = (e, rating) => {
+    e.currentTarget.classList.toggle('active')
+    if (chosenRating.includes(rating)) {
+      const newChosenRating = chosenRating;
+      newChosenRating.splice(newChosenRating.indexOf(rating), 1);
+      setChosenRating([...newChosenRating]);
+    } else {
+      setChosenRating([...chosenRating, rating]);
+    }
+    // console.log(ch)
+  }
+
+
 
   return (
     <div className={`category ${categoryName}`}>
@@ -128,7 +153,7 @@ const Category = () => {
                 <p>List view</p>
               </button>
               <div className="top__productsAmount">
-                <span>100</span>
+                <span>{items?.length}</span>
                 <p>Products</p>
               </div>
             </div>
@@ -158,7 +183,7 @@ const Category = () => {
                   <li key={farm} onClick={(e) => onAddFarm(e, farm)}>
                     <span className='aside__checkbox'>
                       <svg width="16" height="12" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M1.55957 5.85003L4.61957 8.91003L12.4396 1.09003" stroke="#FFFFFF" strokeWidth="1.5" strokeLinecap="round" stroke-Linejoin="round" />
+                        <path d="M1.55957 5.85003L4.61957 8.91003L12.4396 1.09003" stroke="#FFFFFF" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
 
                     </span>
@@ -170,20 +195,40 @@ const Category = () => {
             <div className="aside__item">
               <AsideTitle title='Rating' />
               <ul className="aside__list">
-                <li>
-                  <span className='aside__checkbox'></span>
+                <li onClick={(e) => onAddRating(e, 5)}>
+                  <span className='aside__checkbox'>
+                    <svg width="16" height="12" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1.55957 5.85003L4.61957 8.91003L12.4396 1.09003" stroke="#FFFFFF" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  </span>
                   <Rating itemName='rating5' rate='5' color='gold' /></li>
-                <li>
-                  <span className='aside__checkbox'></span>
+                <li onClick={(e) => onAddRating(e, 4)}>
+                  <span className='aside__checkbox'>
+                    <svg width="16" height="12" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1.55957 5.85003L4.61957 8.91003L12.4396 1.09003" stroke="#FFFFFF" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  </span>
                   <Rating itemName='rating4' rate='4' color='gold' /></li>
-                <li>
-                  <span className='aside__checkbox'></span>
+                <li onClick={(e) => onAddRating(e, 3)}>
+                  <span className='aside__checkbox'>
+                    <svg width="16" height="12" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1.55957 5.85003L4.61957 8.91003L12.4396 1.09003" stroke="#FFFFFF" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  </span>
                   <Rating itemName='rating3' rate='3' color='gold' /></li>
-                <li>
-                  <span className='aside__checkbox'></span>
+                <li onClick={(e) => onAddRating(e, 2)}>
+                  <span className='aside__checkbox'>
+                    <svg width="16" height="12" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1.55957 5.85003L4.61957 8.91003L12.4396 1.09003" stroke="#FFFFFF" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  </span>
                   <Rating itemName='rating2' rate='2' color='gold' /></li>
-                <li>
-                  <span className='aside__checkbox'></span>
+                <li onClick={(e) => onAddRating(e, 1)}>
+                  <span className='aside__checkbox'>
+                    <svg width="16" height="12" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1.55957 5.85003L4.61957 8.91003L12.4396 1.09003" stroke="#FFFFFF" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  </span>
                   <Rating itemName='rating1' rate='1' color='gold' /></li>
               </ul>
             </div>
@@ -191,7 +236,12 @@ const Category = () => {
           </div>
           <div className={`main__items ${view}`}>
             {
-              items?.map(item => <ProductCard key={item.id} {...item} view={view} />)
+              items?.map(item => <ProductCard 
+                key={item.id} 
+                {...item} 
+                view={view}
+                wishlisted={wishListItems.includes(item.id)}
+                 />)
             }
           </div>
         </div>
