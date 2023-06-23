@@ -3,7 +3,6 @@ import './Pagination.scss';
 
 const Pagination = ({ amount, setPage, currentPage }) => {
 
-  console.log('pages', amount)
 
   return (
     <ul className="pages">

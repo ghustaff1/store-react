@@ -6,7 +6,6 @@ import { getCategoryFromPath } from '../../redux/slices/categoriesSlice';
 const CategoriesItem = ({ category, categoryFarms }) => {
   const [isHovered, setIsHovered] = React.useState(false);
 
-  console.log(category)
 
   return (
     <li
@@ -23,7 +22,7 @@ const CategoriesItem = ({ category, categoryFarms }) => {
         <ul className="categoriesItem-popup">
           {categoryFarms.map(farm =>
             <li key={farm}>
-              <Link to={`/categories/${category}?farms=${farm}`}>{farm}</Link>
+              <Link to={`/categories/${category}?farm=${farm}`}>{farm}</Link>
             </li>
           )}
         </ul>}
