@@ -3,7 +3,6 @@ import './Search.scss';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { getCategoryFromPath } from '../../redux/slices/categoriesSlice';
-//import { getPathByCategory } from '../../redux/slices/categoriesSlice';
 
 const Search = () => {
   const [open, setOpen] = React.useState(false);
@@ -27,7 +26,7 @@ const Search = () => {
               {
                 categories.map((obj, i) => {
                   const link = '/categories/'+obj.category;
-                  return (<li key={i}>
+                  return (<li key={i} onClick={()=>setOpen(false)}>
                     <Link to={link}>{getCategoryFromPath(obj.category)}</Link>
                   </li>)
                 }

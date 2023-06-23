@@ -6,18 +6,8 @@ import { useSelector } from 'react-redux';
 import { getCategoryFromPath } from '../../redux/slices/categoriesSlice';
 
 const Categories = () => {
-  const [categoriesData, setCategoriesData] = React.useState([]);
 
-  // const fetchCategories = async () => {
-  //   await axios.get('http://localhost:8000/categories')
-  //     .then(res => setCategoriesData(res.data));
-  // }
-  // React.useEffect(() => {
-  //   fetchCategories();
-  // }, [])
-  const {categories} = useSelector(({ categories }) => categories);
-
-
+  const { categories } = useSelector(({ categories }) => categories);
 
 
   return (
@@ -28,7 +18,7 @@ const Categories = () => {
             categories.map((obj) =>
               <CategoriesItem
                 key={obj.category}
-                category={getCategoryFromPath(obj.category)}
+                category={obj.category}
                 categoryFarms={obj.categoryFarms} />
             )
           }

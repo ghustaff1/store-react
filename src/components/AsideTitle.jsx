@@ -7,9 +7,9 @@ const Title = styled.h2`
   font-size: 18px;
   line-height: 1.5;
 `;
-const AsideTitle = ({title}) => {
+const AsideTitle = ({value}) => {
   return (
-    <Title>{title}</Title>
+    <Title>{value}</Title>
   )
 }
 

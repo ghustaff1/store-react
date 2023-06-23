@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import './Product.scss';
 import MainTitle from '../../components/MainTitle';
 import AddToWishList from '../../components/ProductPage/AddToWishList/AddToWishList';

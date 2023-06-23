@@ -9,29 +9,34 @@ import Rating from '../../components/Rating/Rating';
 import axios from 'axios';
 import { useSelector } from 'react-redux';
 import ProductCard from '../../components/ProductCard/ProductCard';
+// import Pagination from '../../components/CategoryPage/Pagination/Pagination';
+import Pagination from '../../components/CategoryPage/Pagination/Pagination'
 
 const viewType = ['grid', 'list']
 
 const Category = () => {
   const [view, setView] = React.useState(viewType[0]);
-  const [sortPrice, setSortPrice] = React.useState();
+  const [sortPrice, setSortPrice] = React.useState(null);
   const [items, setItems] = React.useState();
   const [farms, setFarms] = React.useState();
   const [chosenFarms, setChosenFarms] = React.useState([]);
   const [chosenRating, setChosenRating] = React.useState([]);
+  const [currentPage, setCurrentPage] = React.useState(0);
 
-  const  wishListItems  = useSelector(({ wishlist }) => wishlist.items);
-  console.log(wishListItems)
+  const wishListItems = useSelector(({ wishlist }) => wishlist.items);
+  // console.log(wishListItems)
 
 
   const gridBtn = React.useRef(null);
   const listBtn = React.useRef(null);
-
   const ascBtn = React.useRef(null);
   const descBtn = React.useRef(null);
 
   const { category } = useParams();
   const categoryName = getCategoryFromPath(category);
+  const _categoryDataUrl = `http://localhost:8000/products?category=${category}`;
+
+  const totalItemsAmount = React.useRef(0);
 
   React.useEffect(() => {
     const gridElem = gridBtn.current;
@@ -40,35 +45,41 @@ const Category = () => {
       .then(res => {
         setFarms(res.data[0].categoryFarms.map(farm => farm))
       });
-    
+    axios.get(_categoryDataUrl)
+      .then(res => totalItemsAmount.current = res.data.length);
+
   }, []);
+
+  const setUrl = (url) => {
+    if (chosenFarms.length) {
+      chosenFarms.forEach(farm => url += `&farm=${farm}`);
+    }
+    if (chosenRating.length) {
+      chosenRating.forEach(rating => url += `&rating=${rating}`);
+    }
+    url += `&_start=${currentPage * 6}&_limit=6`;
+    console.log(url)
+    return url;
+  }
+
 
   React.useEffect(() => {
     const fetchItems = async () => {
-      axios.get(`http://localhost:8000/products?category=${category}`)
+
+      axios.get(setUrl(_categoryDataUrl))
         .then(res => {
+          console.log(res.data)
           if (sortPrice) {
             sortPrice === 'desc' ?
               res.data.sort((a, b) => b.actualPrice - a.actualPrice) :
               res.data.sort((a, b) => a.actualPrice - b.actualPrice);
           }
-          if (chosenFarms.length) {
-            res.data = res.data.filter(obj => {
-              return chosenFarms.includes(obj.farm)
-            })
-          }
-          if (chosenRating.length) {
-            // console.log(chosenRating)
-            res.data = res.data.filter(obj => {
-              return chosenRating.includes(+obj.rating)
-            })
-          }
-          // console.log(res.data)
+
           setItems(res.data)
         });
     };
     fetchItems();
-  }, [category, sortPrice, chosenFarms, chosenRating]); //может изменится если будет другая бд
+  }, [category, sortPrice, chosenFarms, chosenRating, currentPage]); //может изменится если будет другая бд
 
 
   const onChangeView = (view) => {
@@ -108,7 +119,6 @@ const Category = () => {
     }
   };
 
-
   const onAddRating = (e, rating) => {
     e.currentTarget.classList.toggle('active')
     if (chosenRating.includes(rating)) {
@@ -120,6 +130,12 @@ const Category = () => {
     }
     // console.log(ch)
   }
+
+  const test = 0;
+
+  //const pageAmount = Math.ceil(test / 6);
+  // console.log(totalItemsAmount.current)
+  console.log(Math.ceil(totalItemsAmount.current / 6))
 
 
 
@@ -153,7 +169,7 @@ const Category = () => {
                 <p>List view</p>
               </button>
               <div className="top__productsAmount">
-                <span>{items?.length}</span>
+                <span>{totalItemsAmount.current}</span>
                 <p>Products</p>
               </div>
             </div>
@@ -177,7 +193,7 @@ const Category = () => {
         <div className="category__main main">
           <div className="category__aside aside">
             <div className="aside__item">
-              <AsideTitle title='Farms' />
+              <AsideTitle value='Farms' />
               <ul className="aside__list farms">
                 {farms?.map(farm =>
                   <li key={farm} onClick={(e) => onAddFarm(e, farm)}>
@@ -193,7 +209,7 @@ const Category = () => {
               </ul>
             </div>
             <div className="aside__item">
-              <AsideTitle title='Rating' />
+              <AsideTitle value='Rating' />
               <ul className="aside__list">
                 <li onClick={(e) => onAddRating(e, 5)}>
                   <span className='aside__checkbox'>
@@ -236,15 +252,20 @@ const Category = () => {
           </div>
           <div className={`main__items ${view}`}>
             {
-              items?.map(item => <ProductCard 
-                key={item.id} 
-                {...item} 
+              items?.map(item => <ProductCard
+                key={item.id}
+                {...item}
                 view={view}
                 wishlisted={wishListItems.includes(item.id)}
-                 />)
+              />)
             }
           </div>
+
         </div>
+        <Pagination
+          amount={Math.ceil(totalItemsAmount.current / 6)}
+          setPage={setCurrentPage}
+          currentPage={currentPage} />
       </div>
     </div>
   )

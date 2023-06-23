@@ -6,6 +6,7 @@ import Reviews from '../../components/HomePage/Reviews/Reviews';
 import Cart from '../../components/Cart/Cart';
 import { useDispatch } from 'react-redux';
 import { fetchCategories } from '../../redux/slices/categoriesSlice';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
 

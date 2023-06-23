@@ -9,21 +9,37 @@ import { useSelector } from 'react-redux';
 
 const Header = () => {
 
-  const cartItemsAmount=useSelector(({cart})=>cart.items.length);
+  const cartItemsAmount = useSelector(({ cart }) => cart.items.length);
 
   return (
     <div className="header">
       <div className="container">
         <div className="header__info">
           <ul className="header__info-item">
-            <li><GreenLink underline={false} value='Chat with us' /></li>
+            <li>
+              <Link to='/chat'>
+                <GreenLink underline={false} value='Chat with us' />
+              </Link>
+            </li>
             <li><a href="tel:+42036775664">+420 336 775 664</a></li>
             <li><a href="mailto:info@freshnesecom.com">info@freshnesecom.com</a></li>
           </ul>
           <ul className="header__info-item">
-            <li><a href="#" className='green'>Blog</a></li>
-            <li><a href="#" className='green'>About us</a></li>
-            <li><a href="#" className='green'>Careers</a></li>
+            <li>
+              <Link to='/blog'>
+                <GreenLink underline={false} value='Blog' />
+              </Link>
+            </li>
+            <li>
+              <Link to='/about'>
+                <GreenLink underline={false} value='About us' />
+              </Link>
+            </li>
+            <li>
+              <Link to='/careers'>
+                <GreenLink underline={false} value='Careers' pa />
+              </Link>
+            </li>
           </ul>
         </div>
         <div className="header__main">
@@ -62,12 +78,12 @@ const Header = () => {
               </svg>
               <div className='user-cart__amount'>
                 {cartItemsAmount}
-                </div>
+              </div>
             </Link>
           </div>
         </div>
       </div>
-      <Categories/>
+      <Categories />
     </div>
   )
 }

@@ -14,7 +14,7 @@ const HomeSaleSection = ({ title, data, links, className }) => {
       <div className="container">
         <div className='HomeSaleSection__wrapper'>
           <aside className='HomeSaleSection__aside'>
-            <AsideTitle title={title} />
+            <AsideTitle value={title} />
             <ul>
               {links?.map(link => {
                 return <li key={link}><GreenLink underline={true} value={link} /></li>;

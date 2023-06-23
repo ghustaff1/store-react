@@ -8,8 +8,7 @@ import { addToWishList, removeFromWishlist } from '../../redux/slices/wishlistSl
 const ProductCard = ({ title, descr, imgUrl, actualPrice, datedPrice, id, rating, freshness, farm, amount, view, wishlisted }) => {
 
   const sale = datedPrice ? Math.round((1 - actualPrice / datedPrice) * 100) : null;
-  //const [inWishList, setInWishList] = React.useState(wishlist);
-  //const { wishListItems } = useSelector(({ wishlist }) => wishlist.items);
+
   const dispatch=useDispatch();
 
   const onToggleWishlist=()=>{
@@ -82,7 +81,12 @@ const ProductCard = ({ title, descr, imgUrl, actualPrice, datedPrice, id, rating
                   <p>Delivery in 1 day</p>
                 </div>
                 <div className='productCard__buttons'>
-                  <Link to={`/items/${id}`}><MainBtn size='medium' type='2' text='Product detail' dir='next' /></Link>
+                  <Link to={`/items/${id}`}>
+                    <MainBtn size='medium' type='2' text='Product detail' dir='next' />
+                    </Link>
+                    <Link to='https://www.apple.com/'>
+                    <MainBtn size='medium' type='2' text='Product detail' dir='next' />
+                      </Link>
                   {/* может быть изменить кнопку снизу*/}
                   <button className='productCard__wishlist' onClick={onToggleWishlist}>
                     <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">

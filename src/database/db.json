@@ -27,7 +27,7 @@
     {
       "category": "drinks",
       "categoryFarms": [
-        "Kauai Coffee Farm", 
+        "Kauai Coffee Farm",
         "Honeybuzz Meadow",
         "Sweet Milk Acres"
       ]
@@ -176,7 +176,7 @@
       "descr": "An apple is a round fruit with red or green skin and a whitish inside. One variety of apple might be sweet, another sour. The apple isn't just a fruit.",
       "actualPrice": "5.43",
       "imgUrl": [
-        "/img/apples.jpg"
+        "/img/items/02/apples01.jpg"
       ],
       "amount": "100",
       "measure": "kg",
@@ -186,34 +186,34 @@
       "recipe": "Using a sharp knife, slice the apple into thin, even segments, revealing its juicy interior. Finally, spread a generous layer of walnut paste onto each slice, adding a delightful nutty flavor to the refreshing sweetness of the apple.",
       "reviews": [
         {
-          "name":"Agata Smith",
-          "imgUrl":"img/reviews/face1.jpg",
-          "rating":"5",
-          "text":"This apple was incredibly crisp and refreshing, perfect for a healthy snack."
+          "name": "Agata Smith",
+          "imgUrl": "img/reviews/face1.jpg",
+          "rating": "5",
+          "text": "This apple was incredibly crisp and refreshing, perfect for a healthy snack."
         },
         {
-          "name":"Estelle Chavez",
-          "imgUrl":"img/reviews/face2.jpg",
-          "rating":"4",
-          "text":"The flavor of this apple was exceptional, striking a perfect balance between sweetness and tartness."
+          "name": "Estelle Chavez",
+          "imgUrl": "img/reviews/face2.jpg",
+          "rating": "4",
+          "text": "The flavor of this apple was exceptional, striking a perfect balance between sweetness and tartness."
         },
         {
-          "name":"Janice Yates",
-          "imgUrl":"img/reviews/face3.jpg",
-          "rating":"5",
-          "text":"I loved the vibrant red color of this apple, and it tasted as good as it looked."
+          "name": "Janice Yates",
+          "imgUrl": "img/reviews/face3.jpg",
+          "rating": "5",
+          "text": "I loved the vibrant red color of this apple, and it tasted as good as it looked."
         },
         {
-          "name":"Kimberly Vargas",
-          "imgUrl":"img/reviews/face4.jpg",
-          "rating":"2",
-          "text":"This apple had a not good aroma that made me disgust the first bite."
+          "name": "Kimberly Vargas",
+          "imgUrl": "img/reviews/face4.jpg",
+          "rating": "2",
+          "text": "This apple had a not good aroma that made me disgust the first bite."
         },
         {
-          "name":"Lenny Coffey",
-          "imgUrl":"img/reviews/face5.jpg",
-          "rating":"5",
-          "text":"The texture of this apple was pleasantly crunchy, making each bite enjoyable."
+          "name": "Lenny Coffey",
+          "imgUrl": "img/reviews/face5.jpg",
+          "rating": "5",
+          "text": "The texture of this apple was pleasantly crunchy, making each bite enjoyable."
         }
       ]
     },
@@ -225,7 +225,7 @@
       "descr": "Space for a small description",
       "actualPrice": "5.34",
       "imgUrl": [
-        "/img/peaches.jpg"
+        "/img/items/03/peaches01.jpg"
       ],
       "amount": "100",
       "measure": "kg",
@@ -243,7 +243,7 @@
       "actualPrice": "5.34",
       "datedPrice": "8.95",
       "imgUrl": [
-        "/img/testFoodImg.jpg"
+        "/img/items/04/bananas01.jpg"
       ],
       "amount": "100",
       "measure": "kg",
@@ -261,7 +261,7 @@
       "actualPrice": "4.54",
       "datedPrice": "6.72",
       "imgUrl": [
-        "/img/mango.jpg"
+        "/img/items/05/mango01.jpg"
       ],
       "amount": "245",
       "measure": "kg",
@@ -279,7 +279,7 @@
       "actualPrice": "7.56",
       "datedPrice": "9.92",
       "imgUrl": [
-        "/img/pasfruit.jpg"
+        "/img/items/06/pasfruit01.jpg"
       ],
       "amount": "245",
       "measure": "kg",
@@ -297,14 +297,68 @@
       "actualPrice": "30.99",
       "datedPrice": "42.66",
       "imgUrl": [
-        "/img/coffee.jpg"
+        "/img/items/07/coffee01.jpg"
       ],
       "amount": "245",
       "measure": "kg",
       "farm": "Kauai Coffee Farm",
       "freshness": "1",
       "sells": "67",
-      "recipe": "Descr for coffe"
+      "recipe": "Recipe for coffe"
+    },
+    {
+      "id": "08",
+      "title": "Watermelon",
+      "rating": "5",
+      "category": "frnveg",
+      "descr": "Space for a small description",
+      "actualPrice": "8.97",
+      "datedPrice": "9.23",
+      "imgUrl": [
+        "/img/items/08/watermelon01.jpg"
+      ],
+      "amount": "56",
+      "measure": "pcs",
+      "farm": "Blueberry Hill Ridge",
+      "freshness": "2",
+      "sells": "4",
+      "recipe": "Recipe for watermelon"
+    },
+    {
+      "id": "09",
+      "title": "Strawberry",
+      "rating": "5",
+      "category": "frnveg",
+      "descr": "Space for a small description",
+      "actualPrice": "11.43",
+      "datedPrice": "12.95",
+      "imgUrl": [
+        "/img/items/09/strawberry01.jpg"
+      ],
+      "amount": "23",
+      "measure": "kg",
+      "farm": "Blueberry Hill Ridge",
+      "freshness": "3",
+      "sells": "20",
+      "recipe": "Recipe for strawberry"
+    },
+    {
+      "id": "10",
+      "title": "Pineapple",
+      "rating": "5",
+      "category": "frnveg",
+      "descr": "Space for a small description",
+      "actualPrice": "8.95",
+      "datedPrice": "",
+      "imgUrl": [
+        "/img/items/10/pineapple01.jpg"
+      ],
+      "amount": "56",
+      "measure": "pcs",
+      "farm": "Blueberry Hill Ridge",
+      "freshness": "2",
+      "sells": "4",
+      "recipe": "Recipe for pineapple"
     }
   ],
   "farms": [
@@ -335,6 +389,75 @@
     {
       "farm": "Sweet Milk Acres",
       "descr": "We work hard to ensure that the fruit and vegetables we sell are fresh and high in quality. If we don't grow them ourselves, we source them from carefully chosen suppliers, preferring to buy locally whenever possible."
+    }
+  ],
+  "footerLinks": [
+    {
+      "title": "Get in touch",
+      "links": [
+        {
+          "text": "About Us",
+          "path": "/about"
+        },
+        {
+          "text": "Careers",
+          "path": "/careers"
+        },
+        {
+          "text": "Blog",
+          "path": "/blog"
+        }
+      ]
+    },
+    {
+      "title": "Connections",
+      "links": [
+        {
+          "text": "Facebook",
+          "path": "https://facebook.com"
+        },
+        {
+          "text": "Twitter",
+          "path": "https://twitter.com"
+        },
+        {
+          "text": "Youtube",
+          "path": "https://www.youtube.com"
+        },
+        {
+          "text": "Instagram",
+          "path": "https://www.instagram.com"
+        },
+        {
+          "text": "LinkedIn",
+          "path": "https://www.linkedin.com/"
+        }
+      ]
+    },
+    {
+      "title": "Account",
+      "links": [
+        {
+          "text": "Your account",
+          "path": "/account"
+        },
+        {
+          "text": "Returns Centre",
+          "path": "/returns"
+        },
+        {
+          "text": "100 % purchase protection",
+          "path": "/protection"
+        },
+        {
+          "text": "Chat with us",
+          "path": "/chat"
+        },
+        {
+          "text": "Help",
+          "path": "/help"
+        }
+      ]
     }
   ]
 }
