@@ -12,6 +12,7 @@ import ProductCard from '../../components/ProductCard/ProductCard';
 import { useLocation } from 'react-router-dom';
 // import Pagination from '../../components/CategoryPage/Pagination/Pagination';
 import Pagination from '../../components/CategoryPage/Pagination/Pagination'
+import PriceSlider from '../../components/CategoryPage/PriceSlider';
 
 const viewType = ['grid', 'list']
 
@@ -24,9 +25,9 @@ const Category = () => {
   const [chosenRating, setChosenRating] = React.useState([]);
   const [currentPage, setCurrentPage] = React.useState(0);
 
-  const [searchParams, setSearchParams] = useSearchParams();
+  const [sliderPrices, setSliderPrices] = React.useState([]);
 
-  const location = useLocation();
+  const [searchParams, setSearchParams] = useSearchParams();
 
   const wishListItems = useSelector(({ wishlist }) => wishlist.items);
 
@@ -36,6 +37,7 @@ const Category = () => {
   const _itemsUrl = `http://localhost:8000/products?category=${category}`;
 
   const totalItemsAmount = React.useRef(0);
+  const priceRange = React.useRef([]);
 
   React.useEffect(() => {
 
@@ -44,7 +46,12 @@ const Category = () => {
         setFarms(res.data[0].categoryFarms)
       });
 
-    axios.get(_itemsUrl).then(res => totalItemsAmount.current = res.data.length);//может переделать в стейт
+    axios.get(_itemsUrl).then(res => {
+      totalItemsAmount.current = res.data.length;
+      priceRange.current[0] = Math.min.apply(null, res.data.map(obj => obj.price));
+      priceRange.current[1] = Math.max.apply(null, res.data.map(obj => obj.price));
+
+    });
 
     const farmName = searchParams.get('farm');
     if (farmName) setChosenFarms([...chosenFarms, farmName]);
@@ -87,12 +94,17 @@ const Category = () => {
               res.data.sort((a, b) => b.actualPrice - a.actualPrice) :
               res.data.sort((a, b) => a.actualPrice - b.actualPrice);
           }
+          if (sliderPrices.length) {
+            res.data = res.data.filter(
+              obj => obj.price >= sliderPrices[0] && obj.price <= sliderPrices[1]
+              )
+          }
 
           setItems(res.data)
         });
     };
     fetchItems();
-  }, [category, sortPrice, chosenFarms, chosenRating, currentPage]); //может изменится если будет другая бд
+  }, [category, sortPrice, chosenFarms, chosenRating, currentPage, sliderPrices]); //может изменится если будет другая бд
 
 
   const onToggleFarm = (farm) => {
@@ -116,7 +128,8 @@ const Category = () => {
 
   }
 
-  console.log('farms', chosenFarms)
+  console.log('sliderPrices', sliderPrices)
+
 
   return (
     <div className={`category ${categoryName}`}>
@@ -241,7 +254,13 @@ const Category = () => {
                   <Rating itemName='rating1' rate='1' color='gold' /></li>
               </ul>
             </div>
-            {/* PriceSlider */}
+            <div className="aside__item">
+              <AsideTitle value='Price' />
+              <PriceSlider
+                minPrice={priceRange.current[0]}
+                maxPrice={priceRange.current[1]}
+                setSliderPrices={setSliderPrices} />
+            </div>
           </div>
           <div className={`main__items ${view}`}>
             {

@@ -5,9 +5,9 @@ import { Link } from 'react-router-dom';
 import Rating from '../Rating/Rating';
 import { useDispatch } from 'react-redux';
 import { addToWishList, removeFromWishlist } from '../../redux/slices/wishlistSlice';
-const ProductCard = ({ title, descr, imgUrl, actualPrice, datedPrice, id, rating, freshness, farm, amount, view, wishlisted }) => {
+const ProductCard = ({ title, descr, imgUrl, price, datedPrice, id, rating, freshness, farm, amount, view, wishlisted }) => {
 
-  const sale = datedPrice ? Math.round((1 - actualPrice / datedPrice) * 100) : null;
+  const sale = datedPrice ? Math.round((1 - price / datedPrice) * 100) : null;
 
   const dispatch=useDispatch();
 
@@ -38,7 +38,7 @@ const ProductCard = ({ title, descr, imgUrl, actualPrice, datedPrice, id, rating
           <Rating itemName={title} rate={rating} color='gold' />
           <div className="productCard__bottom">
             <div className="productCard__price">
-              <b className='productCard__price-actual'>{actualPrice} USD</b>
+              <b className='productCard__price-actual'>{price} USD</b>
               {sale > 0 ?
                 <s className='productCard__price-dated'>{datedPrice}</s> :
                 null}
@@ -73,7 +73,7 @@ const ProductCard = ({ title, descr, imgUrl, actualPrice, datedPrice, id, rating
               </div>
               <div className="productCard__orderInfo">
                 <div className="productCard__price">
-                  <b className="productCard__price-actual">{actualPrice} USD</b>
+                  <b className="productCard__price-actual">{price} USD</b>
                   <s className="productCard__price-dated">{datedPrice}</s>
                 </div>
                 <div className="productCard__shipping">

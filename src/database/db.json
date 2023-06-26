@@ -47,7 +47,7 @@
         "rating": "4",
         "category": "frnveg",
         "descr": "Space for a small description",
-        "actualPrice": "4.54",
+        "price": "4.54",
         "datedPrice": "6.72",
         "imgUrl": [
           "/img/mango.jpg"
@@ -65,7 +65,7 @@
         "rating": "4",
         "category": "Fruits and vegetables",
         "descr": "Space for a small description",
-        "actualPrice": "7.56",
+        "price": "7.56",
         "datedPrice": "9.92",
         "imgUrl": [
           "/img/pasfruit.jpg"
@@ -83,7 +83,7 @@
         "rating": "4",
         "category": "Drinks",
         "descr": "Space for a small description",
-        "actualPrice": "30.99",
+        "price": "30.99",
         "datedPrice": "42.66",
         "imgUrl": [
           "/img/coffee.jpg"
@@ -155,7 +155,7 @@
       "rating": "2",
       "category": "frnveg",
       "descr": "Space for a small description",
-      "actualPrice": "12.43",
+      "price": "12.43",
       "datedPrice": "15.34",
       "imgUrl": [
         "/img/items/01/carrot01.jpg",
@@ -174,7 +174,7 @@
       "rating": "4",
       "category": "frnveg",
       "descr": "An apple is a round fruit with red or green skin and a whitish inside. One variety of apple might be sweet, another sour. The apple isn't just a fruit.",
-      "actualPrice": "5.43",
+      "price": "5.43",
       "imgUrl": [
         "/img/items/02/apples01.jpg"
       ],
@@ -223,7 +223,7 @@
       "rating": "4",
       "category": "frnveg",
       "descr": "Space for a small description",
-      "actualPrice": "5.34",
+      "price": "5.34",
       "imgUrl": [
         "/img/items/03/peaches01.jpg"
       ],
@@ -240,7 +240,7 @@
       "rating": "4",
       "category": "frnveg",
       "descr": "Space for a small description",
-      "actualPrice": "5.34",
+      "price": "5.34",
       "datedPrice": "8.95",
       "imgUrl": [
         "/img/items/04/bananas01.jpg"
@@ -258,7 +258,7 @@
       "rating": "3",
       "category": "frnveg",
       "descr": "Space for a small description",
-      "actualPrice": "4.54",
+      "price": "4.54",
       "datedPrice": "6.72",
       "imgUrl": [
         "/img/items/05/mango01.jpg"
@@ -276,7 +276,7 @@
       "rating": "4",
       "category": "frnveg",
       "descr": "Space for a small description",
-      "actualPrice": "7.56",
+      "price": "7.56",
       "datedPrice": "9.92",
       "imgUrl": [
         "/img/items/06/pasfruit01.jpg"
@@ -294,7 +294,7 @@
       "rating": "4",
       "category": "drinks",
       "descr": "Space for a small description",
-      "actualPrice": "30.99",
+      "price": "30.99",
       "datedPrice": "42.66",
       "imgUrl": [
         "/img/items/07/coffee01.jpg"
@@ -312,7 +312,7 @@
       "rating": "5",
       "category": "frnveg",
       "descr": "Space for a small description",
-      "actualPrice": "8.97",
+      "price": "8.97",
       "datedPrice": "9.23",
       "imgUrl": [
         "/img/items/08/watermelon01.jpg"
@@ -330,7 +330,7 @@
       "rating": "5",
       "category": "frnveg",
       "descr": "Space for a small description",
-      "actualPrice": "11.43",
+      "price": "11.43",
       "datedPrice": "12.95",
       "imgUrl": [
         "/img/items/09/strawberry01.jpg"
@@ -348,7 +348,7 @@
       "rating": "5",
       "category": "frnveg",
       "descr": "Space for a small description",
-      "actualPrice": "8.95",
+      "price": "8.95",
       "datedPrice": "",
       "imgUrl": [
         "/img/items/10/pineapple01.jpg"
