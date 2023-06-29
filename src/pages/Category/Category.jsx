@@ -91,8 +91,8 @@ const Category = () => {
           console.log(res.data)
           if (sortPrice) {
             sortPrice === 'desc' ?
-              res.data.sort((a, b) => b.actualPrice - a.actualPrice) :
-              res.data.sort((a, b) => a.actualPrice - b.actualPrice);
+              res.data.sort((a, b) => b.price - a.price) :
+              res.data.sort((a, b) => a.price - b.price);
           }
           if (sliderPrices.length) {
             res.data = res.data.filter(
@@ -134,7 +134,7 @@ const Category = () => {
   return (
     <div className={`category ${categoryName}`}>
       <div className="container">
-        <UserPath path={[getCategoryFromPath(category)]} />
+        <UserPath path={[getCategoryFromPath(category)]} section='categories'/>
         <div className='category__top top'>
           <div className="top__head">
             <MainTitle value={categoryName} />

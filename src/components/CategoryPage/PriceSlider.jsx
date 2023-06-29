@@ -25,7 +25,7 @@ const PriceSlider = ({ minPrice, maxPrice, setSliderPrices }) => {
 
   return (
     <Box>
-      <div className="slider-info" style={{display:'flex', alignItems:'center', gap:'30px'}}>
+      <div className="slider-info" style={{display:'flex', alignItems:'center', gap:'30px', marginBottom:'20px'}}>
         <p style={{padding:'10px', minWidth:'50px', textAlign:'center', border:'1px solid #d1d1d1', borderRadius:'12px', backgroundColor:'#f0f0f0'}}>{value[0]}</p>
         -
         <p style={{padding:'10px', minWidth:'50px', textAlign:'center', border:'1px solid #d1d1d1', borderRadius:'12px', backgroundColor:'#f0f0f0'}}>{value[1]}</p>

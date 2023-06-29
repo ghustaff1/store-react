@@ -17,6 +17,7 @@ const initialState = {
     { 'bakery': 'Bakery' },
     { 'meatnfish': 'Meat and fish' },
     { 'drinks': 'Drinks' },
+    {'blogs':'Blogs'}
   ],
 };
 

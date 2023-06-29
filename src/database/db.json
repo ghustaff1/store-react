@@ -50,7 +50,7 @@
         "price": "4.54",
         "datedPrice": "6.72",
         "imgUrl": [
-          "/img/mango.jpg"
+          "/img/items/05/mango01.jpg"
         ],
         "amount": "245",
         "measure": "kg",
@@ -68,7 +68,7 @@
         "price": "7.56",
         "datedPrice": "9.92",
         "imgUrl": [
-          "/img/pasfruit.jpg"
+          "/img/items/06/pasfruit01.jpg"
         ],
         "amount": "245",
         "measure": "kg",
@@ -86,7 +86,7 @@
         "price": "30.99",
         "datedPrice": "42.66",
         "imgUrl": [
-          "/img/coffee.jpg"
+          "/img/items/07/coffee01.jpg"
         ],
         "amount": "245",
         "measure": "kg",
@@ -389,6 +389,88 @@
     {
       "farm": "Sweet Milk Acres",
       "descr": "We work hard to ensure that the fruit and vegetables we sell are fresh and high in quality. If we don't grow them ourselves, we source them from carefully chosen suppliers, preferring to buy locally whenever possible."
+    }
+  ],
+  "blog":[
+    {
+      "id":"01",
+      "title":"Authentic belgian brussels waffles recipe",
+      "bgImg":"/img/blog/01/bgImg.jpeg",
+      "authorImg":"/img/blog/01/authorImg.jpg",
+      "authorName":"Conor Hopkins",
+      "date":[17,6,2023],
+      "topics":[
+        {
+          "topicTitle":"The history of brussels waffles",
+          "topicText":"The brussels waffles is the oldest type of waffle and dates its first occurrence back to 1842/43. The swiss baker, florian dacher, who came from brussels introduced these special waffles for the first time in the city of ghent, belgium. The first written recipe would later be published in 1864 by philippe cauderlier in the his book “la pâtisserie et la confiture”"
+        },
+        {
+          "topicTitle":"Ingredients:",
+          "topicText":"2 cups (500g) French T55 flour, 4 tbsp. (50g) sugar, 1 ½ tbsp. (20g) baking powder, ¾ tsp (4g) salt, ¾ stick (80g) melted butter, 1 ½ cups (360 ml) milk, 4 whole eggs, 5 egg white"
+        },
+        {
+          "topicTitle":"Instructions:",
+          "topicText":"Combine the flour, sugar, baking powder, and salt in bowl. Using your whisk, mix all the previous ingredients. Add whole eggs to mix. Gradually whisk milk into the mix. Add melted butter to the mix. In a separate bowl, using your whisk or mixer beat egg whites to  peaks until it forms into whip cream. Gradually work in the whip cream into the mix using a spatula. Pre-heat waffle iron to 410-430°F (210-220°C) and cook for 3-4 min. Remember to swivel your iron around for even distribution of batter."
+        }
+      ],
+      "tags":["Recipes", "Food", "Vaffles"],
+      "view":"big"
+    },
+    {
+      "id":"02",
+      "title":"Health Benefits of Oranges",
+      "bgImg":"/img/blog/02/bgImg.jpg",
+      "authorImg":"/img/blog/02/authorImg.jpg",
+      "authorName":"Sumaiya Elliott",
+      "date":[23,5,2023],
+      "topics":[
+        {
+          "topicTitle":"Health Benefits",
+          "topicText":"Oranges are a nutritional powerhouse, packed with vitamins and minerals. The most noteworthy of these is vitamin C, a water-soluble antioxidant that prevents cell damage. How does it work? Every cell in the body contains DNA, which is vulnerable to damage, or mutations, when exposed to free radicals. When DNA mutates, it can lead to the growth of cancerous cells. Vitamin C neutralizes free radicals and can prevent this mutation. "
+        },
+        {
+          "topicTitle":"Fiber",
+          "topicText":"The fiber in oranges can keep blood sugar levels in check and reduce high cholesterol to prevent cardiovascular disease."
+        },
+        {
+          "topicTitle":"Calcium",
+          "topicText":"Oranges contain approximately 55 milligrams of calcium, or 6% of your daily requirement. This nutrient is important for building strong bones and maintaining bone health. It's typically associated with dairy products like milk — but whole vegetables and fruits, like oranges, are also a good source."
+        },
+        {
+          "topicTitle":"Portion Sizes",
+          "topicText":"Oranges are high in potassium, so if you're on beta-blockers, eating too many can lead to kidney damage. If you have a condition called hemochromatosis and your body stores excess iron, too much vitamin C can increase iron levels and lead to tissue damage. If you prefer to drink your fruits, stick to one or two glasses of OJ a day. Juices are higher in sugar and lower in fiber. Excess sugar can lead to weight gain. "
+        }
+      ],
+      "tags":["Health", "Food", "Oranges"],
+      "view":"big"
+    },
+    {
+      "id":"03",
+      "title":"What are the Benefits of Eating Salads?",
+      "bgImg":"/img/blog/03/bgImg.jpg",
+      "authorImg":"/img/blog/03/authorImg.jpg",
+      "authorName":"Sumaiya Elliott",
+      "date":[23,6,2023],
+      "topics":[
+        {
+          "topicTitle":"Healthy Salads Help You Get Enough Fruits and Vegetables",
+          "topicText":"Some people struggle when it comes to eating enough fruits and vegetables to maintain a healthy diet. Having a fresh salad every day can make it easy to get all of the servings you need, plus it supports a clean eating lifestyle. To get the most benefit, try to keep the majority of the ingredients in their raw form. These pack the biggest punch when it comes to creating a truly healthy salad, plus they're full of flavour and satisfying crunch."
+        },
+        {
+          "topicTitle":"Vegetable and Fruit Salads are Full of Fibre",
+          "topicText":"Fibre is a wonderful thing; it helps you feel full longer and can provide a range of health benefits. For example, a fibre-rich diet can help alleviate and prevent constipation and lower cholesterol. It can also make it easier to maintain a healthy body weight which reduces your risk of developing heart disease and diabetes. Your blood sugar levels may also stay more even, helping to prevent cravings for sugary foods."
+        },
+        {
+          "topicTitle":"A Salad Provides Water",
+          "topicText":"Some people are surprised to hear that fruits and vegetables are actually great sources of water. In fact, watermelon and strawberries are around 92 percent water while cucumber and certain lettuces are a startling 96 percent water. Eating a combination of vegetables and fruits will high water contents can help you stay hydrated even if you don't have the opportunity to grab a glass of water to drink. Plus, the water consumption from foods does count towards your daily needs."
+        },
+        {
+          "topicTitle":"Salads Can Cool You Down",
+          "topicText":"Whether it is a traditional lettuce-based version or a fruit salad, the cool ingredients can help you feel refreshed during the summer heat. Often, as temperatures rise, hot meals become less appealing. But consuming healthy ingredients is critical all year round if you want to maintain optimal health."
+        }
+      ],
+      "tags":["Health", "Food", "Salads"],
+      "view":"small"
     }
   ],
   "footerLinks": [

@@ -26,7 +26,7 @@ const Header = () => {
           </ul>
           <ul className="header__info-item">
             <li>
-              <Link to='/blog'>
+              <Link to='/blogs'>
                 <GreenLink underline={false} value='Blog' />
               </Link>
             </li>

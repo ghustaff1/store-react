@@ -72,7 +72,7 @@ const Product = () => {
   return (
     <div className="product">
       <div className="container">
-        <UserPath path={[data.category, data.title]} />
+        <UserPath path={[data.category, data.title]} section='categories' />
         <div className='product__wrapper'>
           <div className="product__imgs">
             {data?.imgUrl?.map(url =>
@@ -111,7 +111,7 @@ const Product = () => {
             </dl>
             <div className="product__order">
               <div className="product__price">
-                <p className="product__actualPrice">{(data.actualPrice * amount).toFixed(2)} USD</p>
+                <p className="product__actualPrice">{(data.price * amount).toFixed(2)} USD</p>
                 {data.datedPrice ?
                   <s className="product__datedPrice">{data.datedPrice} USD</s> :
                   null}

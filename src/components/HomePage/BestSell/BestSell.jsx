@@ -2,6 +2,7 @@ import React from 'react'
 import axios from 'axios';
 import HomeSaleSection from '../HomeSaleSection/HomeSaleSection';
 import { useSelector } from 'react-redux';
+import { getCategoryFromPath } from '../../../redux/slices/categoriesSlice';
 
 const BestSell = () => {
 
@@ -11,7 +12,8 @@ const BestSell = () => {
     await axios.get('http://localhost:8000/products')
       .then(res => setData(res.data.sort((a, b) => b.sells - a.sells).slice(0, 3)));
   }
-  const categories=useSelector(({categories})=>categories.categories.map(obj=>obj.category));
+  const categories=useSelector(({categories})=>categories.categories.map(
+    obj=>getCategoryFromPath(obj.category)));
 
   React.useEffect(() => {
     fetchBestSell();

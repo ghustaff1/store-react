@@ -12,7 +12,7 @@ gap:8px;
 
 
 
-const UserPath = ({ path }) => {
+const UserPath = ({ path, section }) => {
 
 
   return (
@@ -22,10 +22,9 @@ const UserPath = ({ path }) => {
         return i !== path.length - 1 ?
           <Link
             key={title + i}
-            to={
-              //getPathByCategory(title)
-              `/categories/${title}`
-            }
+            to={section === 'categories' ?
+              `/${section}/${title}` :
+              `/${section}`}
             style={{ color: '#A9A9A9' }}>{getCategoryFromPath(title)} /</Link> :
           <span key={title + i}>{title}</span>;
       })}

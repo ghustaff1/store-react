@@ -17,6 +17,7 @@ const ProductCard = ({ title, descr, imgUrl, price, datedPrice, id, rating, fres
     dispatch(addToWishList(id));
   }
 
+
   return (
 
     <div className={`productCard ${view}`}>
